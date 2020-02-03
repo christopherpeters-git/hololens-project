@@ -58,11 +58,13 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-#Ignore Demos
-.newHoloLensProject/Assets/MixedRealityToolkit.Examples/
+#Ignore Toolkit
+MixedRealityToolkit*
 
 #Ignore Builds
-.hololens-test/Build
+newHoloLensProject/Builds
 
+#Ignore TexMesh Pro
+newHoloLensProject/Assets/TextMesh Pro/
 
 
