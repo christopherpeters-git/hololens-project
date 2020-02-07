@@ -59,7 +59,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 #Ignore Builds
-newHoloLensProject/Builds
+HoloLensRoomDesigner/Builds
 
 
 
