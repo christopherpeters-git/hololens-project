@@ -12,15 +12,14 @@
       <Path>Library/PackageCache/com.unity.textmeshpro@2.0.1</Path>
       <Path>Library/PackageCache/com.unity.xr.oculus.standalone@1.38.4</Path>
       <Path>Library/PackageCache/com.unity.xr.openvr.standalone@1.0.5</Path>
+      <Path>Library/PackageCache/com.unity.xr.windowsmr.metro@3.0.6</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
     </explicitIncludes>
     <explicitExcludes>
       <Path>.idea</Path>
-      <Path>Builds</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
