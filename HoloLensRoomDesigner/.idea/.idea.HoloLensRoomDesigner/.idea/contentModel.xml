@@ -1343,7 +1343,9 @@
         <e p="RoomDesignerAssets" t="Include">
           <e p="Scripts" t="Include">
             <e p="EditMode.cs" t="Include" />
+            <e p="FurnitureType.cs" t="Include" />
             <e p="Player" t="Include">
+              <e p="FurnitureBehaviour.cs" t="Include" />
               <e p="PlayerBehaviour.cs" t="Include" />
               <e p="UI" t="Include">
                 <e p="ButtonBehaviour.cs" t="Include" />

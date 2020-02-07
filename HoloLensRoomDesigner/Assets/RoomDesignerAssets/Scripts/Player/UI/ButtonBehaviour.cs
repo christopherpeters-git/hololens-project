@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Microsoft.MixedReality.Toolkit.Input;
 using UnityEngine;
 
 public class ButtonBehaviour : MonoBehaviour
@@ -18,10 +19,14 @@ public class ButtonBehaviour : MonoBehaviour
         
     }
 
+    public void Test()
+    {
+        Debug.Log("Button Pressed!");
+    }
+
     public void SetEditMode(int editMode)
     {
         _player.Mode = (EditMode) editMode;
-        Debug.Log("Mode: " + (EditMode)(editMode));
     }
     
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public enum EditMode
 {
     MOVE = 1,
-    ROATE = 2,
+    ROTATE = 2,
     SCALE = 3,
     NONE = 4,
 }

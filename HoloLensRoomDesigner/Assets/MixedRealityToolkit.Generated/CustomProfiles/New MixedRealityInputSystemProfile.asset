@@ -96,9 +96,9 @@ MonoBehaviour:
     reference: Microsoft.MixedReality.Toolkit.Input.DefaultRaycastProvider, Microsoft.MixedReality.Toolkit.Services.InputSystem
   focusQueryBufferSize: 128
   focusIndividualCompoundCollider: 0
-  inputActionsProfile: {fileID: 11400000, guid: 723eb97b02944311b92861f473eee53e,
+  inputActionsProfile: {fileID: 11400000, guid: 6d99b9dba4ec55d48815437f476141a9,
     type: 2}
-  inputActionRulesProfile: {fileID: 11400000, guid: 03945385d89102f41855bc8f5116b199,
+  inputActionRulesProfile: {fileID: 11400000, guid: 3993124525a233a41b3588307550e776,
     type: 2}
   pointerProfile: {fileID: 11400000, guid: f4e4a830deaa9e74ba40bf1e57f69386, type: 2}
   gesturesProfile: {fileID: 11400000, guid: bd7829a9b29409045a745b5a18299291, type: 2}
