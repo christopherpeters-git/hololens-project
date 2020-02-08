@@ -755,6 +755,263 @@
           <e p="Version.txt" t="Include" />
           <e p="WhereToStart.txt" t="Include" />
         </e>
+        <e p="MixedRealityToolkit.Examples" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Demos" t="Include">
+            <e p="Audio" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="LoFiFilterSelection.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Boundary" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="BoundaryVisualizationDemo.cs" t="Include" />
+              </e>
+            </e>
+            <e p="EyeTracking" t="Include">
+              <e p="DemoBasicSetup" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="ColorTap.cs" t="Include" />
+                  <e p="FollowEyeGazeGazeProvider.cs" t="Include" />
+                </e>
+              </e>
+              <e p="DemoScrollPanZoom" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="BaseClasses" t="Include">
+                    <e p="PanZoomBase.cs" t="Include" />
+                    <e p="PanZoomBaseRectTransf.cs" t="Include" />
+                    <e p="PanZoomBaseTexture.cs" t="Include" />
+                  </e>
+                  <e p="PanZoomRectTransf.cs" t="Include" />
+                  <e p="PanZoomTexture.cs" t="Include" />
+                  <e p="ScrollRectTransf.cs" t="Include" />
+                  <e p="ScrollTexture.cs" t="Include" />
+                  <e p="TargetMoveToCamera.cs" t="Include" />
+                </e>
+              </e>
+              <e p="DemoTargetPositioning" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="GrabReleaseDetector.cs" t="Include" />
+                  <e p="MoveObjByEyeGaze.cs" t="Include" />
+                  <e p="SnapTo.cs" t="Include" />
+                  <e p="TransportToRespawnLocation.cs" t="Include" />
+                  <e p="TriggerZonePlaceObjsWithin.cs" t="Include" />
+                </e>
+              </e>
+              <e p="DemoTargetSelections" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="HitBehaviorDestroyOnSelect.cs" t="Include" />
+                  <e p="RotateWithConstSpeedDir.cs" t="Include" />
+                  <e p="TargetGroupCreatorRadial.cs" t="Include" />
+                  <e p="TargetGroupIterator.cs" t="Include" />
+                  <e p="ToggleGameObject.cs" t="Include" />
+                </e>
+              </e>
+              <e p="DemoVisualizer" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="AsyncHelpers.cs" t="Include" />
+                  <e p="BasicInputLogger.cs" t="Include" />
+                  <e p="CustomInputLogger.cs" t="Include" />
+                  <e p="DrawOnTexture.cs" t="Include" />
+                  <e p="InputPointerVisualizer.cs" t="Include" />
+                  <e p="LogStructure.cs" t="Include" />
+                  <e p="LogStructureEyeGaze.cs" t="Include" />
+                  <e p="OnSelectVisualizerInputController.cs" t="Include" />
+                  <e p="ParticleHeatmap.cs" t="Include" />
+                  <e p="ParticleHeatmapParticleData.cs" t="Include" />
+                  <e p="UserInputPlayback.cs" t="Include" />
+                  <e p="UserInputRecorder.cs" t="Include" />
+                  <e p="UserInputRecorderFeedback.cs" t="Include" />
+                  <e p="UserInputRecorderUIController.cs" t="Include" />
+                </e>
+              </e>
+              <e p="General" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="AudioFeedbackPlayer.cs" t="Include" />
+                  <e p="FollowEyeGaze.cs" t="Include" />
+                  <e p="Input" t="Include">
+                    <e p="SpeechVisualFeedback.cs" t="Include" />
+                  </e>
+                  <e p="TargetBehaviors" t="Include">
+                    <e p="BlendOut.cs" t="Include" />
+                    <e p="ChangeSize.cs" t="Include" />
+                    <e p="FaceUser.cs" t="Include" />
+                    <e p="KeepFacingCamera.cs" t="Include" />
+                    <e p="LoadAdditiveScene.cs" t="Include" />
+                    <e p="MoveWithCamera.cs" t="Include" />
+                    <e p="OnLoadStartScene.cs" t="Include" />
+                    <e p="OnLookAtRotateByEyeGaze.cs" t="Include" />
+                    <e p="OnLookAtShowHoverFeedback.cs" t="Include" />
+                  </e>
+                  <e p="Targeting" t="Include">
+                    <e p="DwellSelection.cs" t="Include" />
+                    <e p="TargetEventArgs.cs" t="Include" />
+                  </e>
+                  <e p="Utils" t="Include">
+                    <e p="ChangeRenderMode.cs" t="Include" />
+                    <e p="DoNotRender.cs" t="Include" />
+                    <e p="EyeCalibrationChecker.cs" t="Include" />
+                    <e p="KeepThisAlive.cs" t="Include" />
+                    <e p="LoadProfilesOnStartup.cs" t="Include" />
+                    <e p="StatusText.cs" t="Include" />
+                    <e p="TriggerOnStartup.cs" t="Include" />
+                    <e p="Utils.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Gltf" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="Microsoft.MixedReality.Toolkit.Demos.Gltf.asmdef" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="AssemblyInfo.cs" t="Include" />
+                  <e p="Microsoft.MixedReality.Toolkit.Demos.Gltf.Inspectors.asmdef" t="Include" />
+                  <e p="TestGltfLoadingEditor.cs" t="Include" />
+                </e>
+                <e p="TestGlbLoading.cs" t="Include" />
+                <e p="TestGltfLoading.cs" t="Include" />
+              </e>
+            </e>
+            <e p="HandTracking" t="Include">
+              <e p="Script" t="Include">
+                <e p="ColorChanger.cs" t="Include" />
+                <e p="ColorChangerUnityUI.cs" t="Include" />
+                <e p="DebugTextOutput.cs" t="Include" />
+                <e p="DemoTouchButton.cs" t="Include" />
+                <e p="GestureTester.cs" t="Include" />
+                <e p="GrabTouchExample.cs" t="Include" />
+                <e p="HandInteractionTouch.cs" t="Include" />
+                <e p="HandInteractionTouchRotate.cs" t="Include" />
+                <e p="LaunchUri.cs" t="Include" />
+                <e p="RotateWithPan.cs" t="Include" />
+                <e p="SystemKeyboardExample.cs" t="Include" />
+                <e p="TetheredPlacement.cs" t="Include" />
+                <e p="ToggleBoundingBox.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Input" t="Include">
+              <e p="Scenes" t="Include">
+                <e p="DisablePointers" t="Include">
+                  <e p="DisablePointersExample.cs" t="Include" />
+                </e>
+                <e p="InputActions" t="Include">
+                  <e p="Rotator.cs" t="Include" />
+                </e>
+                <e p="InputData" t="Include">
+                  <e p="InputDataExample.cs" t="Include" />
+                  <e p="InputDataExampleGizmo.cs" t="Include" />
+                </e>
+                <e p="PointerResult" t="Include">
+                  <e p="SpawnOnPointerEvent.cs" t="Include" />
+                </e>
+                <e p="PrimaryPointer" t="Include">
+                  <e p="PrimaryPointerHandlerExample.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Solvers" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="SolverExampleManager.cs" t="Include" />
+              </e>
+            </e>
+            <e p="SpatialAwareness" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="ClearSpatialObservations.cs" t="Include" />
+                <e p="DemoSpatialMeshHandler.cs" t="Include" />
+                <e p="ToggleSpatialMeshVisualization.cs" t="Include" />
+              </e>
+            </e>
+            <e p="StandardShader" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="AssemblyInfo.cs" t="Include" />
+                  <e p="Demos.StandardShader.Inspectors.asmdef" t="Include" />
+                  <e p="MaterialMatrixEditor.cs" t="Include" />
+                </e>
+                <e p="MaterialMatrix.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Utilities" t="Include">
+              <e p="InspectorFields" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="Inspectors" t="Include">
+                  <e p="AssemblyInfo.cs" t="Include" />
+                  <e p="Demos.InspectorFields.Inspectors.asmdef" t="Include" />
+                  <e p="InspectorFieldsExampleInspector.cs" t="Include" />
+                </e>
+                <e p="Microsoft.MixedReality.Toolkit.Demos.InspectorFields.asmdef" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="InspectorFieldsExample.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="MixedRealityCapabilityDemo.cs" t="Include" />
+              </e>
+            </e>
+            <e p="UX" t="Include">
+              <e p="BoundingBox" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="BoundingBoxExampleTest.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Collections" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="GridObjectLayoutControl.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Interactables" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="Microsoft.MixedReality.Toolkit.Demos.UX.Interactables.asmdef" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="CustomInteractablesReceiver.cs" t="Include" />
+                </e>
+              </e>
+              <e p="ManipulationHandler" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="ChangeManipulation.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Slider" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="ShowSliderValue.cs" t="Include" />
+                  <e p="SliderChangeColor.cs" t="Include" />
+                  <e p="SliderLunarLander.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Experimental" t="Include">
+            <e p="Dwell" t="Include">
+              <e p="BaseDwellSample.cs" t="Include" />
+              <e p="CustomDwellHandler.cs" t="Include" />
+              <e p="DwellProfileWithDecay.cs" t="Include" />
+              <e p="InstantDwellSample.cs" t="Include" />
+              <e p="ListItemDwell.cs" t="Include" />
+              <e p="ToggleDwellSample.cs" t="Include" />
+            </e>
+            <e p="HandMenuLayout" t="Include">
+              <e p="Prefabs" t="Include">
+                <e p="HandMenuSliderAssets" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="UpdateSliderTrackLine.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="ScrollingObjectCollection" t="Include">
+              <e p="ScrollableListPopulator.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Inspectors" t="Include">
+            <e p="AssemblyInfo.cs" t="Include" />
+            <e p="DwellProfileWithDecayInspector.cs" t="Include" />
+            <e p="Microsoft.MixedReality.Examples.Editor.Inspectors.asmdef" t="Include" />
+          </e>
+          <e p="License.txt" t="Include" />
+          <e p="Microsoft.MixedReality.Toolkit.Examples.asmdef" t="Include" />
+          <e p="Version.txt" t="Include" />
+        </e>
         <e p="MixedRealityToolkit.Providers" t="Include">
           <e p="License.txt" t="Include" />
           <e p="ObjectMeshObserver" t="Include">
@@ -1349,6 +1606,10 @@
               <e p="PlayerBehaviour.cs" t="Include" />
               <e p="UI" t="Include">
                 <e p="ButtonBehaviour.cs" t="Include" />
+                <e p="Inventory" t="Include">
+                  <e p="ButtonOpenInventory.cs" t="Include" />
+                  <e p="UIInventory.cs" t="Include" />
+                </e>
                 <e p="UIBehaviour.cs" t="Include" />
               </e>
             </e>
@@ -1386,11 +1647,19 @@
       <e p="HoloLensRoomDesigner.sln" t="IncludeFlat" />
       <e p="Microsoft.MixedReality.Toolkit.Async.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Demos.Gltf.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Demos.Gltf.Inspectors.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Demos.InspectorFields.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Demos.InspectorFields.Inspectors.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Demos.UX.Interactables.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Editor.BuildAndDeploy.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Editor.ClassExtensions.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Editor.Inspectors.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Editor.ServiceInspectors.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Editor.Utilities.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Examples.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Examples.Editor.Inspectors.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Gltf.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Gltf.Importers.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Providers.ObjectMeshObserver.csproj" t="IncludeRecursive" />
