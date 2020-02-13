@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Christopher\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Christopher\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_HoloLensRoomDesigner.-75700314.00" t="ExcludeRecursive" />
-    <e p="D:\Dokumente\gitHub_repo\hololens-project\HoloLensRoomDesigner" t="IncludeRecursive">
+    <e p="C:\Users\christopherpeters\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\christopherpeters\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_HoloLensRoomDesigner.1855750529.00" t="ExcludeRecursive" />
+    <e p="C:\Users\christopherpeters\Documents\GitHubRepos\hololens-project\HoloLensRoomDesigner" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Dependencies" t="Include">
+          <e p="net46" t="Include">
+            <e p="Microsoft.Windows.MixedReality.DotNetWinRT" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Microsoft.Windows.MixedReality.DotNetWinRT.Editor.asmdef" t="Include" />
+                <e p="Microsoft.Windows.MixedReality.DotNetWinRT.Init.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="MixedRealityToolkit" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="Attributes" t="Include">
@@ -135,12 +145,16 @@
               <e p="AnimatorParameter.cs" t="Include" />
               <e p="ArticulatedHandPose.cs" t="Include" />
               <e p="AutoStartBehavior.cs" t="Include" />
+              <e p="AxisFlags.cs" t="Include" />
               <e p="AxisType.cs" t="Include" />
               <e p="CollationOrder.cs" t="Include" />
               <e p="ExperienceScale.cs" t="Include" />
               <e p="Handedness.cs" t="Include" />
+              <e p="ManipulationHandFlags.cs" t="Include" />
+              <e p="ManipulationProximityFlags.cs" t="Include" />
               <e p="MixedRealityCapability.cs" t="Include" />
               <e p="MixedRealityPose.cs" t="Include" />
+              <e p="MixedRealityTransform.cs" t="Include" />
               <e p="MovementConstraintType.cs" t="Include" />
               <e p="OrientationType.cs" t="Include" />
               <e p="PivotAxis.cs" t="Include" />
@@ -157,6 +171,7 @@
               <e p="SystemType.cs" t="Include" />
               <e p="TrackedHandJoint.cs" t="Include" />
               <e p="TrackedObjectType.cs" t="Include" />
+              <e p="TransformFlags.cs" t="Include" />
               <e p="TypeGrouping.cs" t="Include" />
               <e p="Vector3Smoothed.cs" t="Include" />
               <e p="VolumeType.cs" t="Include" />
@@ -187,6 +202,13 @@
             </e>
             <e p="Teleport" t="Include">
               <e p="TeleportEventData.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Experimental" t="Include">
+            <e p="Utilities" t="Include">
+              <e p="Migration" t="Include">
+                <e p="IMigrationHandler.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Extensions" t="Include">
@@ -220,6 +242,7 @@
             <e p="ReflectionExtensions.cs" t="Include" />
             <e p="StringBuilderExtensions.cs" t="Include" />
             <e p="StringExtensions.cs" t="Include" />
+            <e p="SystemNumericsExtensions.cs" t="Include" />
             <e p="Texture2DExtensions.cs" t="Include" />
             <e p="TransformExtensions.cs" t="Include" />
             <e p="TypeExtensions.cs" t="Include" />
@@ -249,6 +272,7 @@
             <e p="Profiles" t="Include">
               <e p="BaseMixedRealityProfileInspector.cs" t="Include" />
               <e p="BaseMixedRealityToolkitConfigurationProfileInspector.cs" t="Include" />
+              <e p="DataProviderAccessServiceInspector.cs" t="Include" />
               <e p="MixedRealityBoundaryVisualizationProfileInspector.cs" t="Include" />
               <e p="MixedRealityCameraProfileInspector.cs" t="Include" />
               <e p="MixedRealityControllerMappingProfileInspector.cs" t="Include" />
@@ -304,6 +328,7 @@
             <e p="Setup" t="Include">
               <e p="MixedRealityEditorSettings.cs" t="Include" />
               <e p="MixedRealityProjectConfiguratorWindow.cs" t="Include" />
+              <e p="ProjectPreferencesInspector.cs" t="Include" />
             </e>
             <e p="Utilities" t="Include">
               <e p="InspectorFieldsUtility.cs" t="Include" />
@@ -449,10 +474,12 @@
           <e p="License.txt" t="Include" />
           <e p="Microsoft.MixedReality.Toolkit.asmdef" t="Include" />
           <e p="Providers" t="Include">
+            <e p="BaseBoundarySystem.cs" t="Include" />
             <e p="BaseCameraSettingsProvider.cs" t="Include" />
             <e p="BaseController.cs" t="Include" />
             <e p="BaseGenericInputSource.cs" t="Include" />
             <e p="BaseInputDeviceManager.cs" t="Include" />
+            <e p="BaseSpatialMeshObserver.cs" t="Include" />
             <e p="BaseSpatialObserver.cs" t="Include" />
             <e p="GenericPointer.cs" t="Include" />
             <e p="Hands" t="Include">
@@ -518,7 +545,6 @@
             <e p="BuildAndDeploy" t="Include">
               <e p="AssemblyInfo.cs" t="Include" />
               <e p="BuildDeployPreferences.cs" t="Include" />
-              <e p="BuildDeployWindow.cs" t="Include" />
               <e p="BuildInfo.cs" t="Include" />
               <e p="BuildInfoExtensions.cs" t="Include" />
               <e p="IBuildInfo.cs" t="Include" />
@@ -531,6 +557,7 @@
             </e>
             <e p="CameraCache.cs" t="Include" />
             <e p="CameraEventRouter.cs" t="Include" />
+            <e p="CameraFOVChecker.cs" t="Include" />
             <e p="CoreServices.cs" t="Include" />
             <e p="DebugUtilities.cs" t="Include" />
             <e p="EdgeUtilities.cs" t="Include" />
@@ -538,19 +565,25 @@
               <e p="AssemblyDefinition.cs" t="Include" />
               <e p="AssemblyInfo.cs" t="Include" />
               <e p="EditorAssemblyReloadManager.cs" t="Include" />
-              <e p="EditorPreferences.cs" t="Include" />
               <e p="EditorProjectUtilities.cs" t="Include" />
+              <e p="FileUtilities.cs" t="Include" />
               <e p="GUIEnabledWrapper.cs" t="Include" />
               <e p="InputManagerAxis.cs" t="Include" />
               <e p="InputManagerAxisType.cs" t="Include" />
               <e p="InputMappingAxisUtility.cs" t="Include" />
               <e p="Microsoft.MixedReality.Toolkit.Editor.Utilities.asmdef" t="Include" />
               <e p="MixedRealityOptimizeUtils.cs" t="Include" />
-              <e p="MixedRealityPreferences.cs" t="Include" />
               <e p="PackageManifest" t="Include">
                 <e p="PackageManifestUpdater.cs" t="Include" />
               </e>
+              <e p="Preferences" t="Include">
+                <e p="EditorPreferences.cs" t="Include" />
+                <e p="MixedRealityProjectPreferences.cs" t="Include" />
+                <e p="ProjectPreferences.cs" t="Include" />
+                <e p="SerializableDictionary.cs" t="Include" />
+              </e>
               <e p="ScriptedImporterAssetReimporter.cs" t="Include" />
+              <e p="ScriptUtilities.cs" t="Include" />
               <e p="Setup" t="Include">
                 <e p="MixedRealityProjectConfigurator.cs" t="Include" />
                 <e p="MixedRealityToolkitFiles.cs" t="Include" />
@@ -559,6 +592,7 @@
                 <e p="USBDeviceInfo.cs" t="Include" />
                 <e p="USBDeviceListener.cs" t="Include" />
               </e>
+              <e p="XRSettingsUtilities.cs" t="Include" />
             </e>
             <e p="Facades" t="Include">
               <e p="ServiceFacade.cs" t="Include" />
@@ -687,9 +721,6 @@
               <e p="Interpolator.cs" t="Include" />
               <e p="MixedRealityRaycaster.cs" t="Include" />
               <e p="RaycastResultComparer.cs" t="Include" />
-              <e p="TwoHandMoveLogic.cs" t="Include" />
-              <e p="TwoHandRotateLogic.cs" t="Include" />
-              <e p="TwoHandScaleLogic.cs" t="Include" />
               <e p="VectorRollingStatistics.cs" t="Include" />
             </e>
             <e p="PlatformUtility.cs" t="Include" />
@@ -982,6 +1013,20 @@
             </e>
           </e>
           <e p="Experimental" t="Include">
+            <e p="Demos" t="Include">
+              <e p="UX" t="Include">
+                <e p="BoundsControl" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="BoundsControlRuntimeExample.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="ObjectManipulator" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="ReturnToBounds.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
             <e p="Dwell" t="Include">
               <e p="BaseDwellSample.cs" t="Include" />
               <e p="CustomDwellHandler.cs" t="Include" />
@@ -999,8 +1044,15 @@
                 </e>
               </e>
             </e>
+            <e p="NonNativeKeyboard" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="KeyboardTest.cs" t="Include" />
+              </e>
+            </e>
             <e p="ScrollingObjectCollection" t="Include">
-              <e p="ScrollableListPopulator.cs" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="ScrollableListPopulator.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Inspectors" t="Include">
@@ -1040,53 +1092,102 @@
             <e p="ViveWandController.cs" t="Include" />
             <e p="WindowsMixedRealityOpenVRMotionController.cs" t="Include" />
           </e>
-          <e p="Version.txt" t="Include" />
-          <e p="WindowsMixedReality" t="Include">
+          <e p="UnityAR" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
-            <e p="BaseWindowsMixedRealitySource.cs" t="Include" />
             <e p="Definitions" t="Include">
-              <e p="HolographicDepthReprojectionMethod.cs" t="Include" />
-              <e p="HolographicFrameNativeData.cs" t="Include" />
-            </e>
-            <e p="DotNetAdapter" t="Include">
-              <e p="Plugins" t="Include">
-                <e p="net46" t="Include">
-                  <e p="Microsoft.Windows.MixedReality.DotNetWinRT" t="Include">
-                    <e p="Editor" t="Include">
-                      <e p="Microsoft.Windows.MixedReality.DotNetWinRT.Editor.asmdef" t="Include" />
-                      <e p="Microsoft.Windows.MixedReality.DotNetWinRT.Init.cs" t="Include" />
-                    </e>
-                  </e>
-                </e>
-              </e>
+              <e p="ArTrackedPose.cs" t="Include" />
+              <e p="ArTrackingType.cs" t="Include" />
+              <e p="ArUpdateType.cs" t="Include" />
             </e>
             <e p="Editor" t="Include">
               <e p="AssemblyInfo.cs" t="Include" />
-              <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Editor.asmdef" t="Include" />
-              <e p="WindowsMixedRealityCameraSettingsProfileInspector.cs" t="Include" />
+              <e p="ConfigurationChecker" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="Microsoft.MixedReality.Toolkit.Providers.UnityAR.ConfigurationChecker.asmdef" t="Include" />
+                <e p="UnityARConfigurationChecker.cs" t="Include" />
+              </e>
+              <e p="Microsoft.MixedReality.Toolkit.Providers.UnityAR.Editor.asmdef" t="Include" />
+              <e p="UnityARCameraSettingsProfileInspector.cs" t="Include" />
             </e>
-            <e p="Extensions" t="Include">
-              <e p="GestureRecognizerExtensions.cs" t="Include" />
-              <e p="InteractionSourceExtensions.cs" t="Include" />
+            <e p="Microsoft.MixedReality.Toolkit.Providers.UnityAR.asmdef" t="Include" />
+            <e p="UnityARCameraSettings.cs" t="Include" />
+            <e p="UnityARCameraSettingsProfile.cs" t="Include" />
+            <e p="Utilities" t="Include">
+              <e p="ArEnumConversion.cs" t="Include" />
             </e>
-            <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.asmdef" t="Include" />
-            <e p="WindowsMixedRealityArticulatedHand.cs" t="Include" />
-            <e p="WindowsMixedRealityCameraSettings.cs" t="Include" />
-            <e p="WindowsMixedRealityCameraSettingsProfile.cs" t="Include" />
-            <e p="WindowsMixedRealityController.cs" t="Include" />
-            <e p="WindowsMixedRealityDeviceManager.cs" t="Include" />
-            <e p="WindowsMixedRealityEyeGazeDataProvider.cs" t="Include" />
-            <e p="WindowsMixedRealityGGVHand.cs" t="Include" />
-            <e p="WindowsMixedRealityHandRecorder.cs" t="Include" />
-            <e p="WindowsMixedRealityReprojectionUpdater.cs" t="Include" />
-            <e p="WindowsMixedRealitySpatialMeshObserver.cs" t="Include" />
-            <e p="WindowsMixedRealityUtilities.cs" t="Include" />
+          </e>
+          <e p="Version.txt" t="Include" />
+          <e p="WindowsMixedReality" t="Include">
+            <e p="Shared" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="BaseWindowsMixedRealityCameraSettings.cs" t="Include" />
+              <e p="Definitions" t="Include">
+                <e p="HolographicDepthReprojectionMethod.cs" t="Include" />
+                <e p="IWindowsMixedRealityUtilitiesProvider.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="ConfigurationChecker" t="Include">
+                  <e p="AssemblyInfo.cs" t="Include" />
+                  <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.ConfigurationChecker.asmdef" t="Include" />
+                  <e p="WindowsMixedRealityConfigurationChecker.cs" t="Include" />
+                </e>
+                <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Editor.asmdef" t="Include" />
+                <e p="WindowsMixedRealityCameraSettingsProfileInspector.cs" t="Include" />
+              </e>
+              <e p="Extensions" t="Include">
+                <e p="WindowsExtensions.cs" t="Include" />
+              </e>
+              <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Shared.asmdef" t="Include" />
+              <e p="WindowsMixedRealityArticulatedHandDefinition.cs" t="Include" />
+              <e p="WindowsMixedRealityCameraSettingsProfile.cs" t="Include" />
+              <e p="WindowsMixedRealityHandRecorder.cs" t="Include" />
+              <e p="WindowsMixedRealityReprojectionUpdater.cs" t="Include" />
+              <e p="WindowsMixedRealityUtilities.cs" t="Include" />
+            </e>
+            <e p="XR2018" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="Controllers" t="Include">
+                <e p="BaseWindowsMixedRealitySource.cs" t="Include" />
+                <e p="WindowsMixedRealityArticulatedHand.cs" t="Include" />
+                <e p="WindowsMixedRealityController.cs" t="Include" />
+                <e p="WindowsMixedRealityGGVHand.cs" t="Include" />
+              </e>
+              <e p="csc.rsp" t="Include" />
+              <e p="Definitions" t="Include">
+                <e p="HolographicFrameNativeData.cs" t="Include" />
+              </e>
+              <e p="Extensions" t="Include">
+                <e p="GestureRecognizerExtensions.cs" t="Include" />
+                <e p="InteractionSourceExtensions.cs" t="Include" />
+              </e>
+              <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.asmdef" t="Include" />
+              <e p="WindowsMixedRealityCameraSettings.cs" t="Include" />
+              <e p="WindowsMixedRealityDeviceManager.cs" t="Include" />
+              <e p="WindowsMixedRealityEyeGazeDataProvider.cs" t="Include" />
+              <e p="WindowsMixedRealitySpatialMeshObserver.cs" t="Include" />
+              <e p="WindowsMixedRealityUtilitiesProvider.cs" t="Include" />
+            </e>
+            <e p="XRSDK" t="Include">
+              <e p="Editor" t="Include">
+                <e p="AssemblyInfo.cs" t="Include" />
+                <e p="Microsoft.MixedReality.Toolkit.Providers.XRSDK.WMR.Editor.asmdef" t="Include" />
+                <e p="WindowsMixedRealityXRSDKConfigurationChecker.cs" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="WindowsVoiceInput" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
             <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsVoiceInput.asmdef" t="Include" />
             <e p="WindowsDictationInputProvider.cs" t="Include" />
             <e p="WindowsSpeechInputProvider.cs" t="Include" />
+          </e>
+          <e p="XRSDK" t="Include">
+            <e p="Editor" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="Microsoft.MixedReality.Toolkit.Providers.XRSDK.ConfigurationChecker.asmdef" t="Include" />
+              <e p="XRSDKConfigurationChecker.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="MixedRealityToolkit.SDK" t="Include">
@@ -1098,21 +1199,82 @@
                 <e p="DwellProfile.cs" t="Include" />
                 <e p="DwellUnityEvent.cs" t="Include" />
               </e>
+              <e p="Input" t="Include">
+                <e p="Handlers" t="Include">
+                  <e p="ObjectManipulator.cs" t="Include" />
+                </e>
+              </e>
               <e p="Utilities" t="Include">
                 <e p="DirectionalIndicator.cs" t="Include" />
+                <e p="Migration" t="Include">
+                  <e p="ObjectManipulatorMigrationHandler.cs" t="Include" />
+                </e>
                 <e p="StabilizationPlaneModifier.cs" t="Include" />
                 <e p="WorldAnchorManager.cs" t="Include" />
               </e>
               <e p="UX" t="Include">
+                <e p="BoundsControl" t="Include">
+                  <e p="BoundsControl.cs" t="Include" />
+                  <e p="BoundsControlTypes.cs" t="Include" />
+                  <e p="Visuals" t="Include">
+                    <e p="BoxDisplay.cs" t="Include" />
+                    <e p="Configuration" t="Include">
+                      <e p="BoxDisplayConfiguration.cs" t="Include" />
+                      <e p="HandlesBaseConfiguration.cs" t="Include" />
+                      <e p="LinksConfiguration.cs" t="Include" />
+                      <e p="RotationHandlesConfiguration.cs" t="Include" />
+                      <e p="ScaleHandlesConfiguration.cs" t="Include" />
+                    </e>
+                    <e p="HandlesBase.cs" t="Include" />
+                    <e p="Links.cs" t="Include" />
+                    <e p="ProximityEffect" t="Include">
+                      <e p="IProximityEffectObjectProvider.cs" t="Include" />
+                      <e p="ProximityEffect.cs" t="Include" />
+                      <e p="ProximityEffectConfiguration.cs" t="Include" />
+                    </e>
+                    <e p="RotationHandles.cs" t="Include" />
+                    <e p="ScaleHandles.cs" t="Include" />
+                    <e p="VisualUtils.cs" t="Include" />
+                  </e>
+                </e>
                 <e p="MixedRealityKeyboard.cs" t="Include" />
                 <e p="MixedRealityKeyboardPreview.cs" t="Include" />
+              </e>
+            </e>
+            <e p="FollowSolver" t="Include">
+              <e p="Follow.cs" t="Include" />
+            </e>
+            <e p="HandCoach" t="Include">
+              <e p="Materials" t="Include">
+                <e p="Teaching_Hand2.shader" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="HandInteractionHint.cs" t="Include" />
+                <e p="MoveToTarget.cs" t="Include" />
+                <e p="RotateAroundPoint.cs" t="Include" />
               </e>
             </e>
             <e p="Inspectors" t="Include">
               <e p="AssemblyInfo.cs" t="Include" />
               <e p="Microsoft.MixedReality.Toolkit.SDK.Experimental.Inspectors.asmdef" t="Include" />
+              <e p="NonNativeKeyboard" t="Include">
+                <e p="SliderInputFieldInspector.cs" t="Include" />
+              </e>
               <e p="ScrollingObjectCollection" t="Include">
                 <e p="ScrollingObjectCollectionInspector.cs" t="Include" />
+              </e>
+            </e>
+            <e p="NonNativeKeyboard" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="AxisSlider.cs" t="Include" />
+                <e p="CapsLockHighlight.cs" t="Include" />
+                <e p="KeyboardKeyFunc.cs" t="Include" />
+                <e p="KeyboardValueKey.cs" t="Include" />
+                <e p="NonNativeKeyboard.cs" t="Include" />
+                <e p="SliderInputField.cs" t="Include" />
+                <e p="SymbolDisableHighlight.cs" t="Include" />
+                <e p="SymbolKeyboard.cs" t="Include" />
+                <e p="UICollection.cs" t="Include" />
               </e>
             </e>
             <e p="PulseShader" t="Include">
@@ -1186,19 +1348,35 @@
                 <e p="BaseEyeFocusHandler.cs" t="Include" />
                 <e p="BaseFocusHandler.cs" t="Include" />
                 <e p="BaseInputHandler.cs" t="Include" />
+                <e p="Constraints" t="Include">
+                  <e p="ConstraintManager.cs" t="Include" />
+                  <e p="FaceUserConstraint.cs" t="Include" />
+                  <e p="FixedDistanceConstraint.cs" t="Include" />
+                  <e p="FixedRotationToUserConstraint.cs" t="Include" />
+                  <e p="FixedRotationToWorldConstraint.cs" t="Include" />
+                  <e p="MaintainApparentSizeConstraint.cs" t="Include" />
+                  <e p="MoveAxisConstraint.cs" t="Include" />
+                  <e p="RotationAxisConstraint.cs" t="Include" />
+                  <e p="TransformConstraint.cs" t="Include" />
+                </e>
                 <e p="ControllerPoseSynchronizer.cs" t="Include" />
                 <e p="CursorContextManipulationHandler.cs" t="Include" />
                 <e p="DictationHandler.cs" t="Include" />
                 <e p="EyeTrackingTarget.cs" t="Include" />
                 <e p="FocusHandler.cs" t="Include" />
                 <e p="InputActionHandler.cs" t="Include" />
-                <e p="ManipulationHandler.cs" t="Include" />
+                <e p="Manipulation" t="Include">
+                  <e p="ManipulationHandler.cs" t="Include" />
+                  <e p="ManipulationMoveLogic.cs" t="Include" />
+                  <e p="TwoHandRotateLogic.cs" t="Include" />
+                  <e p="TwoHandScaleLogic.cs" t="Include" />
+                </e>
+                <e p="MinMaxScaleConstraint.cs" t="Include" />
                 <e p="PointerClickHandler.cs" t="Include" />
                 <e p="PointerHandler.cs" t="Include" />
                 <e p="SpeechInputHandler.cs" t="Include" />
                 <e p="TeleportHotSpot.cs" t="Include" />
                 <e p="TouchHandler.cs" t="Include" />
-                <e p="TransformScaleHandler.cs" t="Include" />
               </e>
               <e p="InputSimulationIndicators.cs" t="Include" />
             </e>
@@ -1274,6 +1452,7 @@
                 <e p="BoundingBox" t="Include">
                   <e p="BoundingBox.cs" t="Include" />
                   <e p="BoundingBoxHelper.cs" t="Include" />
+                  <e p="IBoundsTargetProvider.cs" t="Include" />
                 </e>
                 <e p="Collections" t="Include">
                   <e p="BaseObjectCollection.cs" t="Include" />
@@ -1310,6 +1489,7 @@
                 <e p="Pointers" t="Include">
                   <e p="BaseControllerPointer.cs" t="Include" />
                   <e p="BaseMousePointer.cs" t="Include" />
+                  <e p="CurvePointer.cs" t="Include" />
                   <e p="DefaultPointerMediator.cs" t="Include" />
                   <e p="DefaultPrimaryPointerSelector.cs" t="Include" />
                   <e p="GGVPointer.cs" t="Include" />
@@ -1344,6 +1524,7 @@
                 </e>
                 <e p="Sliders" t="Include">
                   <e p="PinchSlider.cs" t="Include" />
+                  <e p="SliderAxis.cs" t="Include" />
                   <e p="SliderEvent.cs" t="Include" />
                   <e p="SliderEventData.cs" t="Include" />
                   <e p="SliderSounds.cs" t="Include" />
@@ -1425,6 +1606,16 @@
             <e p="Dwell" t="Include">
               <e p="DwellHandlerInspector.cs" t="Include" />
             </e>
+            <e p="Experimental" t="Include">
+              <e p="FollowSolver" t="Include">
+                <e p="FollowInspector.cs" t="Include" />
+              </e>
+              <e p="UX" t="Include">
+                <e p="ObjectManipulator" t="Include">
+                  <e p="ObjectManipulatorInspector.cs" t="Include" />
+                </e>
+              </e>
+            </e>
             <e p="Input" t="Include">
               <e p="Handlers" t="Include">
                 <e p="BaseInputHandlerInspector.cs" t="Include" />
@@ -1496,9 +1687,12 @@
         </e>
         <e p="MixedRealityToolkit.Services" t="Include">
           <e p="BoundarySystem" t="Include">
-            <e p="AssemblyInfo.cs" t="Include" />
-            <e p="Microsoft.MixedReality.Toolkit.Services.BoundarySystem.asmdef" t="Include" />
-            <e p="MixedRealityBoundarySystem.cs" t="Include" />
+            <e p="XR2018" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+              <e p="csc.rsp" t="Include" />
+              <e p="Microsoft.MixedReality.Toolkit.Services.BoundarySystem.asmdef" t="Include" />
+              <e p="MixedRealityBoundarySystem.cs" t="Include" />
+            </e>
           </e>
           <e p="CameraSystem" t="Include">
             <e p="AssemblyInfo.cs" t="Include" />
@@ -1664,9 +1858,16 @@
       <e p="Microsoft.MixedReality.Toolkit.Gltf.Importers.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Providers.ObjectMeshObserver.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Providers.OpenVR.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Providers.UnityAR.ConfigCheck.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Providers.UnityAR.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Providers.UnityAR.Editor.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.ConfigCheck.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Editor.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.Shared.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.Providers.WindowsVoiceInput.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Providers.XRSDK.ConfigCheck.csproj" t="IncludeRecursive" />
+      <e p="Microsoft.MixedReality.Toolkit.Providers.XRSDK.WindowsMixedReality.Editor.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.SDK.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.SDK.Experimental.Inspectors.csproj" t="IncludeRecursive" />
       <e p="Microsoft.MixedReality.Toolkit.SDK.Inspectors.csproj" t="IncludeRecursive" />

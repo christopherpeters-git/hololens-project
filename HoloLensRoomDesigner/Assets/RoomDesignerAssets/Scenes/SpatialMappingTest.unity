@@ -196,6 +196,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 937494981584380331, guid: 38f1132da0975f945b2a38060ba91f18,
+        type: 3}
+      propertyPath: name
+      value: Couch
+      objectReference: {fileID: 0}
+    - target: {fileID: 937494981584380331, guid: 38f1132da0975f945b2a38060ba91f18,
+        type: 3}
+      propertyPath: placeRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1666898110776198579, guid: 38f1132da0975f945b2a38060ba91f18,
         type: 3}
       propertyPath: m_Layer
@@ -299,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 1666898111704662887, guid: 38f1132da0975f945b2a38060ba91f18,
         type: 3}
       propertyPath: manipulationType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1666898111704662887, guid: 38f1132da0975f945b2a38060ba91f18,
         type: 3}
@@ -553,6 +563,35 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &882080892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1666898111704662881, guid: 38f1132da0975f945b2a38060ba91f18,
+    type: 3}
+  m_PrefabInstance: {fileID: 653724870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &882080893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882080892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0701dcbd499e3248b1ea0a49bd0c93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SurfaceParent: {fileID: 0}
+  m_FreezeUpdates: 0
+  m_VolumeType: 1
+  m_SphereRadius: 2
+  m_HalfBoxExtents: {x: 4, y: 4, z: 4}
+  m_LodType: 1
+  m_NumUpdatesBeforeRemoval: 10
+  m_SecondsBetweenUpdates: 2.5
+  m_Layer: 31
+  m_Material: {fileID: 0}
+  m_EnableCollisions: 1
 --- !u!1 &1009502626
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d9acc7968244a8886f3af591305bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeProfile: {fileID: 11400000, guid: d13bc6557ab17ab41878066bb2682416, type: 2}
+  activeProfile: {fileID: 11400000, guid: 4469da467c2e2f7408052ffb1faf5a55, type: 2}
 --- !u!4 &1009502628
 Transform:
   m_ObjectHideFlags: 0
