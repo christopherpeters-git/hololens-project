@@ -3,18 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using Microsoft.MixedReality.Toolkit.Input;
 using Microsoft.MixedReality.Toolkit.UI;
+using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
 using UnityEngine;
 using UnityEngine.XR.WSA;
 
 public class FurnitureBehaviour : MonoBehaviour
 {
     public FurnitureType type;
-
-    public float placeRange;
     
     public bool moved { get; set; }
 
+    private ManipulationHandler _manManipulationHandler;
+
     public String name;
+
+    public float SurfaceMountDistance;
+
+    private SurfaceMagnetism _magnet;
+
+    private Rigidbody _rigid;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,28 +30,66 @@ public class FurnitureBehaviour : MonoBehaviour
         {
             type = FurnitureType.FLOOR;
         }
+
+        _rigid = GetComponent<Rigidbody>();
+        _magnet = GetComponent<SurfaceMagnetism>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        DetectCollisions();
+        //ControlRigidBody();
     }
 
-    void DetectCollisions()
+    void OnCollisionEnter(Collision other)
     {
-        int layerMask = 1 << LayerMask.NameToLayer("SpatialSurface");
-        Vector3[] directions = {Vector3.up, Vector3.down, Vector3.forward, Vector3.back, Vector3.left, Vector3.right};
-        foreach (var dir in directions)
+        
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        _rigid.AddForce(Vector3.zero);
+    }
+
+    void ControlRigidBody()
+    {
+        if (IsNearToPreferredSurface())
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, dir, out hit, placeRange))
-            {
-                Debug.Log("Mesh Hit!");
-            }
-            Debug.DrawRay(transform.position,dir,Color.green, placeRange);
+            _magnet.enabled = true;
+        }
+        else
+        {
+            _magnet.enabled = false;
         }
     }
 
+    private bool IsNearToPreferredSurface()
+    {
+        Vector3 position = transform.position;
+        Vector3 rayDir;
+        bool hitSurface = false;
+        switch (type)
+        {
+            case FurnitureType.WALL:
+                hitSurface = Physics.Raycast(position, transform.forward * SurfaceMountDistance) ||
+                             Physics.Raycast(position, -transform.forward * SurfaceMountDistance) ||
+                             Physics.Raycast(position, transform.right * SurfaceMountDistance) ||
+                             Physics.Raycast(position, -transform.right * SurfaceMountDistance);
+                Debug.DrawRay(position,transform.forward * SurfaceMountDistance, Color.red);
+                break;
+            case FurnitureType.CEILING:
+                hitSurface = Physics.Raycast(position, transform.up * SurfaceMountDistance);
+                Debug.DrawRay(position,transform.up * SurfaceMountDistance, Color.red,SurfaceMountDistance);
+                break;
+            case FurnitureType.FLOOR:
+                hitSurface = Physics.Raycast(position, -transform.up * SurfaceMountDistance);
+                Debug.DrawRay(position,-transform.up * SurfaceMountDistance, Color.red);
 
+                break;
+            case FurnitureType.NONE:
+                hitSurface = true;
+                break;
+        }
+        return hitSurface;
+    }    
 }
