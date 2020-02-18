@@ -26,7 +26,7 @@ public class ButtonBehaviour : MonoBehaviour
 
     public void SetEditMode(int editMode)
     {
-        _player.Mode = (EditMode) editMode;
+        _player.Tool = (ToolMode) editMode;
     }
     
 }

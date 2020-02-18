@@ -13,7 +13,7 @@ public class FurnitureBehaviour : MonoBehaviour
     
     public bool moved { get; set; }
 
-    private ManipulationHandler _manManipulationHandler;
+    private ManipulationHandler _manipulationHandler;
 
     public String name;
 
@@ -22,6 +22,9 @@ public class FurnitureBehaviour : MonoBehaviour
     private SurfaceMagnetism _magnet;
 
     private Rigidbody _rigid;
+
+    public PlayerBehaviour Player { get; set; }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,18 +38,25 @@ public class FurnitureBehaviour : MonoBehaviour
         _magnet = GetComponent<SurfaceMagnetism>();
     }
 
+    public void DestroyOnRemove()
+    {
+        if (Player.Tool == ToolMode.REMOVE)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        //ControlRigidBody();
+        ControlRigidBody();
     }
-
-    void OnCollisionEnter(Collision other)
-    {
-        
-    }
-
     void OnCollisionExit(Collision other)
+    {
+        ResetForce();
+    }
+    
+    public void ResetForce()
     {
         _rigid.AddForce(Vector3.zero);
     }
@@ -55,36 +65,35 @@ public class FurnitureBehaviour : MonoBehaviour
     {
         if (IsNearToPreferredSurface())
         {
-            _magnet.enabled = true;
+            ResetForce();
+            _rigid.useGravity = false;
         }
         else
         {
-            _magnet.enabled = false;
+            _rigid.useGravity = true;
         }
     }
 
     private bool IsNearToPreferredSurface()
     {
         Vector3 position = transform.position;
-        Vector3 rayDir;
         bool hitSurface = false;
         switch (type)
         {
             case FurnitureType.WALL:
-                hitSurface = Physics.Raycast(position, transform.forward * SurfaceMountDistance) ||
-                             Physics.Raycast(position, -transform.forward * SurfaceMountDistance) ||
-                             Physics.Raycast(position, transform.right * SurfaceMountDistance) ||
-                             Physics.Raycast(position, -transform.right * SurfaceMountDistance);
+                hitSurface = Physics.Raycast(position, transform.forward,SurfaceMountDistance) ||
+                             Physics.Raycast(position, -transform.forward,SurfaceMountDistance) ||
+                             Physics.Raycast(position, transform.right,SurfaceMountDistance) ||
+                             Physics.Raycast(position, -transform.right,SurfaceMountDistance);
                 Debug.DrawRay(position,transform.forward * SurfaceMountDistance, Color.red);
                 break;
             case FurnitureType.CEILING:
-                hitSurface = Physics.Raycast(position, transform.up * SurfaceMountDistance);
+                hitSurface = Physics.Raycast(position, transform.up,SurfaceMountDistance);
                 Debug.DrawRay(position,transform.up * SurfaceMountDistance, Color.red,SurfaceMountDistance);
                 break;
             case FurnitureType.FLOOR:
-                hitSurface = Physics.Raycast(position, -transform.up * SurfaceMountDistance);
+                hitSurface = Physics.Raycast(position, -transform.up,SurfaceMountDistance);
                 Debug.DrawRay(position,-transform.up * SurfaceMountDistance, Color.red);
-
                 break;
             case FurnitureType.NONE:
                 hitSurface = true;

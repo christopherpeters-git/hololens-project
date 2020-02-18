@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EditMode
+public enum ToolMode
 {
-    MOVE = 1,
-    ROTATE = 2,
-    SCALE = 3,
-    NONE = 4,
+    EDIT = 1,
+    REMOVE = 2,
+    NONE = 3,
 }

@@ -6,17 +6,15 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
 
-    public GameObject currentObject;
+    [HideInInspector] public GameObject currentObject;
+    [SerializeField] private Camera _camera;
+    private readonly float  SPAWNDISTANCE = 2;
 
-    private Camera _camera;
-    
-    private readonly float  SPAWNDISTANCE = 1;
-
-    public EditMode Mode { set; get; }
+    public ToolMode Tool { get; set; }
     // Start is called before the first frame update
     void Start()
     {
-        Mode = EditMode.MOVE;
+        Tool = ToolMode.EDIT;
         _camera = GetComponentInParent<Camera>();
     }
 
@@ -37,13 +35,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             Destroy(currentObject);
         }
-        currentObject = Instantiate(furniture, _camera.transform.position + new Vector3(0,0,SPAWNDISTANCE), Quaternion.identity);
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        currentObject = Instantiate(furniture, _camera.transform.position + new Vector3(0,0,SPAWNDISTANCE), Quaternion.identity);
+        currentObject.GetComponent<FurnitureBehaviour>().Player = this;
     }
 }

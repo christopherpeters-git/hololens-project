@@ -10,7 +10,7 @@ public class UIBehaviour : MonoBehaviour
 
     private PlayerBehaviour _player;
 
-    private EditMode _oldMode = EditMode.NONE;
+    private ToolMode _oldMode = ToolMode.NONE;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +27,11 @@ public class UIBehaviour : MonoBehaviour
 
     private void UpdateEditorInfoText()
     {
-        if (!(_player.Mode == _oldMode))
+        if (_player.Tool != _oldMode)
         {
-            _editorMode.text = "Tool: " + _player.Mode;
+            _editorMode.text = "Tool: " + _player.Tool;
         }
-        _oldMode = _player.Mode;
+        _oldMode = _player.Tool;
     }
     
 }

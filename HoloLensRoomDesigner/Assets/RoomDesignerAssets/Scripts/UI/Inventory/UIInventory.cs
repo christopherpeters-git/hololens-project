@@ -36,10 +36,4 @@ public class UIInventory : MonoBehaviour
             xOffset += 0.175f;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -1793,17 +1793,22 @@
         </e>
         <e p="RoomDesignerAssets" t="Include">
           <e p="Scripts" t="Include">
-            <e p="EditMode.cs" t="Include" />
+            <e p="FurnitureBehaviour.cs" t="Include" />
             <e p="FurnitureType.cs" t="Include" />
             <e p="Player" t="Include">
-              <e p="FurnitureBehaviour.cs" t="Include" />
               <e p="PlayerBehaviour.cs" t="Include" />
-              <e p="UI" t="Include">
+            </e>
+            <e p="ToolMode.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="Inventory" t="Include">
+                <e p="ButtonOpenInventory.cs" t="Include" />
+                <e p="ButtonSwitchTool.cs" t="Include" />
+                <e p="UIFollowTarget.cs" t="Include" />
+                <e p="UIInventory.cs" t="Include" />
+                <e p="UITools.cs" t="Include" />
+              </e>
+              <e p="RotateResizeMove" t="Include">
                 <e p="ButtonBehaviour.cs" t="Include" />
-                <e p="Inventory" t="Include">
-                  <e p="ButtonOpenInventory.cs" t="Include" />
-                  <e p="UIInventory.cs" t="Include" />
-                </e>
                 <e p="UIBehaviour.cs" t="Include" />
               </e>
             </e>
