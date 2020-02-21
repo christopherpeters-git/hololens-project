@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/RoomDesignerAssets/Scenes/FurnitureDemo.unity
+- path: Assets/RoomDesignerAssets/Scenes/Main.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

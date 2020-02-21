@@ -8,7 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     [HideInInspector] public GameObject currentObject;
     [SerializeField] private Camera _camera;
-    private readonly float  SPAWNDISTANCE = 2;
+    [SerializeField] private float  _spawnDistance = 2;
 
     public ToolMode Tool { get; set; }
     // Start is called before the first frame update
@@ -36,7 +36,7 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(currentObject);
         }
         
-        currentObject = Instantiate(furniture, _camera.transform.position + new Vector3(0,0,SPAWNDISTANCE), Quaternion.identity);
+        currentObject = Instantiate(furniture, _camera.transform.position + new Vector3(0,0,_spawnDistance), Quaternion.identity);
         currentObject.GetComponent<FurnitureBehaviour>().Player = this;
     }
 }

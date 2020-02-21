@@ -246,6 +246,11 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1847349742}
+    - target: {fileID: 2871489558168768156, guid: 3dd9c2ef1b70b984c98816b72cf228c9,
+        type: 3}
+      propertyPath: _spawnDistance
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2871489558168768157, guid: 3dd9c2ef1b70b984c98816b72cf228c9,
         type: 3}
       propertyPath: m_LocalPosition.x
