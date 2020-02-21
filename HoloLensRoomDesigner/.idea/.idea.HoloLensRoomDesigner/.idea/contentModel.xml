@@ -1800,6 +1800,8 @@
             </e>
             <e p="ToolMode.cs" t="Include" />
             <e p="UI" t="Include">
+              <e p="ButtonBackToUI.cs" t="Include" />
+              <e p="ButtonPhotoMode.cs" t="Include" />
               <e p="Inventory" t="Include">
                 <e p="ButtonOpenInventory.cs" t="Include" />
                 <e p="ButtonSwitchTool.cs" t="Include" />
