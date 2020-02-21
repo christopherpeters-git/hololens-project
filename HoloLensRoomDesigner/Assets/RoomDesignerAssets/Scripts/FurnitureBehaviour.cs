@@ -42,6 +42,7 @@ public class FurnitureBehaviour : MonoBehaviour
     {
         if (Player.Tool == ToolMode.REMOVE)
         {
+            Player.currentObject = null;
             Destroy(gameObject);
         }
     }

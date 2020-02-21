@@ -17,14 +17,8 @@ public class UITools : MonoBehaviour
         _player = FindObjectOfType<PlayerBehaviour>();
         DisplayToolInText();
     }
-
-    public void SwitchToolMode()
-    {
-       SwitchTool();
-       DisplayToolInText();
-    }
     
-    public void SwitchTool()
+    public void SwitchToolMode()
     {
         if (_player.Tool + 1 != ToolMode.NONE)
         {
@@ -34,6 +28,7 @@ public class UITools : MonoBehaviour
         {
             _player.Tool = ToolMode.EDIT;
         }
+        DisplayToolInText();
         SwitchState();
     }
 

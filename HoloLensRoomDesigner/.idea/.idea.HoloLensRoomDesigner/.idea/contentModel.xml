@@ -16,6 +16,7 @@
             </e>
           </e>
         </e>
+        <e p="FurnitureController.cs" t="Include" />
         <e p="MixedRealityToolkit" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="Attributes" t="Include">
