@@ -16,7 +16,6 @@
             </e>
           </e>
         </e>
-        <e p="FurnitureController.cs" t="Include" />
         <e p="MixedRealityToolkit" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
           <e p="Attributes" t="Include">
@@ -1807,10 +1806,6 @@
                 <e p="UIFollowTarget.cs" t="Include" />
                 <e p="UIInventory.cs" t="Include" />
                 <e p="UITools.cs" t="Include" />
-              </e>
-              <e p="RotateResizeMove" t="Include">
-                <e p="ButtonBehaviour.cs" t="Include" />
-                <e p="UIBehaviour.cs" t="Include" />
               </e>
             </e>
           </e>
