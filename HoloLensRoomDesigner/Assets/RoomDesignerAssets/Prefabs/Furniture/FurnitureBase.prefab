@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -3412536990064974472}
   - component: {fileID: 4058879132975531642}
   - component: {fileID: 1964813838217097022}
+  - component: {fileID: 3056276251328084793}
   m_Layer: 0
   m_Name: FurnitureBase
   m_TagString: Furniture
@@ -202,3 +203,21 @@ MonoBehaviour:
   type: 0
   name: default
   SurfaceMountDistance: 0.125
+--- !u!114 &3056276251328084793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214999004689720866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820f94d57893bf843a0cd6d93313fe6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTransform: {fileID: 1865397492326295981}
+  handType: 3
+  proximityType: 3
+  scaleMinimum: 1
+  scaleMaximum: 1000
+  relativeToInitialState: 1
