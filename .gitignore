@@ -61,5 +61,8 @@ crashlytics-build.properties
 #Ignore Builds
 HoloLensRoomDesigner/Builds
 
+#Ignoring ShaderCache
+HoloLensRoomDesigner/Library/ShaderCache
+
 
 
