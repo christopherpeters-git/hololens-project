@@ -264,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 2049529140113575894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -331000, y: -215500, z: 0.5}
-  m_LocalScale: {x: 1000, y: 1000, z: 1}
+  m_LocalScale: {x: 500, y: 500, z: 1}
   m_Children:
   - {fileID: 2052122590693465800}
   - {fileID: 2052482672241220534}
@@ -309,15 +309,9 @@ MonoBehaviour:
   VoiceCommand: Select
   voiceRequiresFocus: 1
   profiles:
-  - Target: {fileID: 2049510764995531008}
+  - Target: {fileID: 2049529140113575894}
     Themes:
-    - {fileID: 11400000, guid: d37afabc007bf774d9431b9a7cbe6fba, type: 2}
-  - Target: {fileID: 2049149268842067106}
-    Themes:
-    - {fileID: 11400000, guid: cbde7890146c3024d928b7afc2e16065, type: 2}
-  - Target: {fileID: 0}
-    Themes:
-    - {fileID: 11400000, guid: 6a4ada4b285469047946e8662531da54, type: 2}
+    - {fileID: 0}
   OnClick:
     m_PersistentCalls:
       m_Calls:

@@ -359,15 +359,9 @@ MonoBehaviour:
   VoiceCommand: Select
   voiceRequiresFocus: 1
   profiles:
-  - Target: {fileID: 5539536465941137641}
-    Themes:
-    - {fileID: 11400000, guid: d37afabc007bf774d9431b9a7cbe6fba, type: 2}
-  - Target: {fileID: 5539773171832352075}
-    Themes:
-    - {fileID: 11400000, guid: cbde7890146c3024d928b7afc2e16065, type: 2}
   - Target: {fileID: 0}
     Themes:
-    - {fileID: 11400000, guid: 6a4ada4b285469047946e8662531da54, type: 2}
+    - {fileID: 0}
   OnClick:
     m_PersistentCalls:
       m_Calls:

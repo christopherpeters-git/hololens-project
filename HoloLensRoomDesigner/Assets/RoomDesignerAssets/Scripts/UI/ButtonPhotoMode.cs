@@ -23,6 +23,5 @@ public class ButtonPhotoMode : MonoBehaviour
             _buttonBackToUI.SetActive(false);
             _ui.SetActive(true);
         }
-        Debug.Log(_ui.activeSelf);
     }
 }

@@ -2,9 +2,9 @@
   
   <!-- These are specific to this Unity project and can't be overridden -->
   <PropertyGroup>
-    <UnityProjectAssetsPath>D:\Christopher\Dokumente\gitHub_repo\hololens-project\HoloLensRoomDesigner\Assets</UnityProjectAssetsPath>
+    <UnityProjectAssetsPath>C:\Users\christopherpeters\Documents\GitHubRepos\hololens-project\HoloLensRoomDesigner\Assets</UnityProjectAssetsPath>
     
-    <_MSBuildForUnityGeneratedOutputDirectory>D:\Christopher\Dokumente\gitHub_repo\hololens-project\HoloLensRoomDesigner\MSBuild</_MSBuildForUnityGeneratedOutputDirectory>
+    <_MSBuildForUnityGeneratedOutputDirectory>C:\Users\christopherpeters\Documents\GitHubRepos\hololens-project\HoloLensRoomDesigner\MSBuild</_MSBuildForUnityGeneratedOutputDirectory>
     <MSBuildForUnityGeneratedProjectDirectory>$(_MSBuildForUnityGeneratedOutputDirectory)\Projects</MSBuildForUnityGeneratedProjectDirectory>
   </PropertyGroup>
   
@@ -23,7 +23,7 @@
     
     <UnityMajorVersion>2019</UnityMajorVersion>
     <UnityMinorVersion>2</UnityMinorVersion>
-    <UnityEditorInstallPath>D:\Program Files (x86)\Unity\2019.2.21f1\Editor</UnityEditorInstallPath>
+    <UnityEditorInstallPath>C:\Program Files\Unity\Hub\Editor\2019.2.21f1\Editor</UnityEditorInstallPath>
   </PropertyGroup>
   
   <PropertyGroup>

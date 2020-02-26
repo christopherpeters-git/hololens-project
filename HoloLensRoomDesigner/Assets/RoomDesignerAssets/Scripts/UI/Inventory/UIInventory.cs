@@ -29,11 +29,11 @@ public class UIInventory : MonoBehaviour
         float xOffset = 0;
         foreach (var piece in _furniturePieces)
         {
-            GameObject newButton = Instantiate(_buttonPrefab, new Vector3(xOffset - 0.125f,0.125f,0.4f), Quaternion.identity, _contentWindow.transform);
+            GameObject newButton = Instantiate(_buttonPrefab, new Vector3(xOffset - 0.1f,0.0f,0.8f), Quaternion.identity, _contentWindow.transform);
             newButton.GetComponentInChildren<TextMeshPro>().text =
                 piece.GetComponent<FurnitureBehaviour>().name;
             newButton.GetComponent<Interactable>().OnClick.AddListener(() => _player.SpawnFurniture(piece));
-            xOffset += 0.175f;
+            xOffset += 0.1f;
         }
     }
 }
