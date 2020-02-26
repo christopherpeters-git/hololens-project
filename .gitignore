@@ -64,5 +64,8 @@ HoloLensRoomDesigner/Builds/
 #Ignoring Library
 HoloLensRoomDesigner/Library/
 
+#Rider files
+HoloLensRoomDesigner/.idea/
+
 
 
