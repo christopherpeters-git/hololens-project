@@ -59,7 +59,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 #Ignore Builds
-HoloLensRoomDesigner/Builds
+HoloLensRoomDesigner/Builds/
 
 #Ignoring Library
 HoloLensRoomDesigner/Library/
