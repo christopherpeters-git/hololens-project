@@ -96,7 +96,7 @@ QualitySettings:
     softVegetation: 0
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
-    vSyncCount: 1
+    vSyncCount: 0
     lodBias: 0.7
     maximumLODLevel: 0
     streamingMipmapsActive: 0
@@ -145,7 +145,9 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
+    - Windows Store Apps
   - serializedVersion: 2
     name: Very High
     pixelLightCount: 3
@@ -180,7 +182,9 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
+    - Windows Store Apps
   - serializedVersion: 2
     name: Ultra
     pixelLightCount: 4
@@ -215,7 +219,9 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
+    - Windows Store Apps
   m_PerPlatformDefaultQuality:
     Android: 2
     Lumin: 5
@@ -223,9 +229,9 @@ QualitySettings:
     Nintendo Switch: 5
     PS4: 5
     PSP2: 2
-    Standalone: 5
+    Standalone: 2
     WebGL: 3
-    Windows Store Apps: 5
+    Windows Store Apps: 2
     XboxOne: 5
     iPhone: 2
     tvOS: 2
