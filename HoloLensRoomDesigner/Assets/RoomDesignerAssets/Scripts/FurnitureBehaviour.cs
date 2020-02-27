@@ -9,18 +9,15 @@ using UnityEngine.XR.WSA;
 
 public class FurnitureBehaviour : MonoBehaviour
 {
-    private static int _maxId = 0;
-    private static int id;
-    
     public FurnitureType type;
     public bool moved { get; set; }
     public String name;
     public float SurfaceMountDistance;
 
+    private static int _maxId = 0;
+    private static int id;
+
     private Outline _outline;
-    
-
-
     public PlayerBehaviour Player { get; set; }
     
     // Start is called before the first frame update
@@ -55,7 +52,11 @@ public class FurnitureBehaviour : MonoBehaviour
     {
         if (Player.Tool == ToolMode.REMOVE)
         {
-            Player.currentObject = null;
+            if (Player.currentObject == gameObject)
+            {
+                Player.currentObject = null;
+            }
+            Player.instantiatedObjects.Remove(gameObject);
             Destroy(gameObject);
         }
     }
