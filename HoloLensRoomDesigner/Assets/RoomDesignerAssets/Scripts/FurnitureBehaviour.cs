@@ -10,39 +10,53 @@ using UnityEngine.XR.WSA;
 public class FurnitureBehaviour : MonoBehaviour
 {
     public FurnitureType type;
-    
     public bool moved { get; set; }
-
-    private ManipulationHandler _manipulationHandler;
-
     public String name;
-
     public float SurfaceMountDistance;
 
-    private SurfaceMagnetism _magnet;
+    private static int _maxId = 0;
+    private static int id;
 
-    private Rigidbody _rigid;
-
+    private Outline _outline;
     public PlayerBehaviour Player { get; set; }
     
     // Start is called before the first frame update
     void Start()
     {
+        _outline = GetComponent<Outline>();
+        SetId();
         moved = false;
         if (type == FurnitureType.NONE)
         {
             type = FurnitureType.FLOOR;
         }
+    }
 
-        _rigid = GetComponent<Rigidbody>();
-        _magnet = GetComponent<SurfaceMagnetism>();
+    public void AddAsWorldAnchor()
+    {
+        
+    }
+
+    public void RemoveAsWorldAnchor()
+    {
+        
+    }
+
+    private void SetId()
+    {
+        id = _maxId;
+        _maxId++;
     }
 
     public void DestroyOnRemove()
     {
         if (Player.Tool == ToolMode.REMOVE)
         {
-            Player.currentObject = null;
+            if (Player.currentObject == gameObject)
+            {
+                Player.currentObject = null;
+            }
+            Player.instantiatedObjects.Remove(gameObject);
             Destroy(gameObject);
         }
     }
@@ -50,31 +64,22 @@ public class FurnitureBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ControlRigidBody();
-    }
-    void OnCollisionExit(Collision other)
-    {
-        ResetForce();
-    }
-    
-    public void ResetForce()
-    {
-        _rigid.AddForce(Vector3.zero);
+        OutlineIfNearSurfaceType();
     }
 
-    void ControlRigidBody()
+    private void OutlineIfNearSurfaceType()
     {
         if (IsNearToPreferredSurface())
         {
-            ResetForce();
-            _rigid.useGravity = false;
+            _outline.enabled = false;
         }
         else
         {
-            _rigid.useGravity = true;
+            _outline.enabled = true;
         }
     }
-
+    
+    
     private bool IsNearToPreferredSurface()
     {
         Vector3 position = transform.position;

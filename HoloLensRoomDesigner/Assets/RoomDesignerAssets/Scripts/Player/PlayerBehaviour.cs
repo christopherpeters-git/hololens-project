@@ -5,15 +5,30 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-
-    [HideInInspector] public GameObject currentObject;
     [SerializeField] private Camera _camera;
     [SerializeField] private float  _spawnDistance = 2;
-
+    
+    [HideInInspector] public GameObject currentObject;
+    [HideInInspector] public List<GameObject> instantiatedObjects;
+    
+    /// <summary>
+    /// To make this script a singleton
+    /// </summary>
+    private static PlayerBehaviour _instance;
+    
     public ToolMode Tool { get; set; }
     // Start is called before the first frame update
     void Start()
     {
+        if (!_instance)
+        {
+            _instance = this;
+        }
+        else
+        {
+            throw new Exception("Only one PlayerBehaviour is allowed!");
+        }
+        instantiatedObjects = new List<GameObject>();
         Tool = ToolMode.EDIT;
         _camera = GetComponentInParent<Camera>();
     }
@@ -33,10 +48,12 @@ public class PlayerBehaviour : MonoBehaviour
         bool hasCurrentObjectBeenTouched = currentObject && !currentObject.GetComponent<FurnitureBehaviour>().moved;
         if (hasCurrentObjectBeenTouched)
         {
+            instantiatedObjects.Remove(currentObject);
             Destroy(currentObject);
         }
         
         currentObject = Instantiate(furniture, _camera.transform.position + new Vector3(0,0,_spawnDistance), Quaternion.identity);
         currentObject.GetComponent<FurnitureBehaviour>().Player = this;
+        instantiatedObjects.Add(currentObject);
     }
 }
