@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.MixedReality.Toolkit.Experimental.Utilities;
 using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private float  _spawnDistance = 2;
+    [SerializeField] private WorldAnchorManager _worldAnchorManager;
     
     [HideInInspector] public GameObject currentObject;
     [HideInInspector] public List<GameObject> instantiatedObjects;
@@ -53,7 +55,9 @@ public class PlayerBehaviour : MonoBehaviour
         }
         
         currentObject = Instantiate(furniture, _camera.transform.position + new Vector3(0,0,_spawnDistance), Quaternion.identity);
-        currentObject.GetComponent<FurnitureBehaviour>().Player = this;
+        FurnitureBehaviour currentFurnitureBehaviour = currentObject.GetComponent<FurnitureBehaviour>();
+        currentFurnitureBehaviour.Player = this;
+        currentFurnitureBehaviour.WorldAnchorManager = _worldAnchorManager;
         instantiatedObjects.Add(currentObject);
     }
 }

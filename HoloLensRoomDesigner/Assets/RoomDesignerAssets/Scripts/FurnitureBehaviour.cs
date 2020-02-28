@@ -14,7 +14,7 @@ public class FurnitureBehaviour : MonoBehaviour
 
     private Outline _outline;
 
-    private WorldAnchorManager _worldAnchorManager;
+    public WorldAnchorManager WorldAnchorManager { get; set; }
     public PlayerBehaviour Player { get; set; }
     
     // Start is called before the first frame update
@@ -31,12 +31,12 @@ public class FurnitureBehaviour : MonoBehaviour
 
     public void AddAsWorldAnchor()
     {
-        _worldAnchorManager.AttachAnchor(gameObject, id.ToString());
+        WorldAnchorManager.AttachAnchor(gameObject, id.ToString());
     }
 
     public void RemoveAsWorldAnchor()
     {
-        _worldAnchorManager.RemoveAnchor(id.ToString());
+        WorldAnchorManager.RemoveAnchor(id.ToString());
     }
 
     private void SetId()
@@ -54,7 +54,7 @@ public class FurnitureBehaviour : MonoBehaviour
                 Player.currentObject = null;
             }
             Player.instantiatedObjects.Remove(gameObject);
-            _worldAnchorManager.RemoveAnchor(id.ToString());
+            WorldAnchorManager.RemoveAnchor(id.ToString());
             Destroy(gameObject);
         }
     }
