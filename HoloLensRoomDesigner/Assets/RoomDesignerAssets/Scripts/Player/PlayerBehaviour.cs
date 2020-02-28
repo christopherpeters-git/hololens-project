@@ -45,7 +45,7 @@ public class PlayerBehaviour : MonoBehaviour
             throw new ArgumentException("That object was no furniture. Wrong Prefab listed?");
         }
 
-        bool hasCurrentObjectBeenTouched = currentObject && !currentObject.GetComponent<FurnitureBehaviour>().moved;
+        bool hasCurrentObjectBeenTouched = currentObject && !currentObject.GetComponent<FurnitureBehaviour>().Moved;
         if (hasCurrentObjectBeenTouched)
         {
             instantiatedObjects.Remove(currentObject);

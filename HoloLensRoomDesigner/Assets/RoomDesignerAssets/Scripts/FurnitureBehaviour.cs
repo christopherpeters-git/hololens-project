@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Microsoft.MixedReality.Toolkit.Input;
-using Microsoft.MixedReality.Toolkit.UI;
-using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
+using Microsoft.MixedReality.Toolkit.Experimental.Utilities;
 using UnityEngine;
-using UnityEngine.XR.WSA;
 
 public class FurnitureBehaviour : MonoBehaviour
 {
     public FurnitureType type;
-    public bool moved { get; set; }
-    public String name;
-    public float SurfaceMountDistance;
+    public bool Moved { get; set; }
+    public new String name;
+    public float surfaceMountDistance;
 
     private static int _maxId = 0;
     private static int id;
 
     private Outline _outline;
+
+    private WorldAnchorManager _worldAnchorManager;
     public PlayerBehaviour Player { get; set; }
     
     // Start is called before the first frame update
@@ -25,7 +22,7 @@ public class FurnitureBehaviour : MonoBehaviour
     {
         _outline = GetComponent<Outline>();
         SetId();
-        moved = false;
+        Moved = false;
         if (type == FurnitureType.NONE)
         {
             type = FurnitureType.FLOOR;
@@ -34,12 +31,12 @@ public class FurnitureBehaviour : MonoBehaviour
 
     public void AddAsWorldAnchor()
     {
-        
+        _worldAnchorManager.AttachAnchor(gameObject, id.ToString());
     }
 
     public void RemoveAsWorldAnchor()
     {
-        
+        _worldAnchorManager.RemoveAnchor(id.ToString());
     }
 
     private void SetId()
@@ -57,6 +54,7 @@ public class FurnitureBehaviour : MonoBehaviour
                 Player.currentObject = null;
             }
             Player.instantiatedObjects.Remove(gameObject);
+            _worldAnchorManager.RemoveAnchor(id.ToString());
             Destroy(gameObject);
         }
     }
@@ -87,19 +85,19 @@ public class FurnitureBehaviour : MonoBehaviour
         switch (type)
         {
             case FurnitureType.WALL:
-                hitSurface = Physics.Raycast(position, transform.forward,SurfaceMountDistance) ||
-                             Physics.Raycast(position, -transform.forward,SurfaceMountDistance) ||
-                             Physics.Raycast(position, transform.right,SurfaceMountDistance) ||
-                             Physics.Raycast(position, -transform.right,SurfaceMountDistance);
-                Debug.DrawRay(position,transform.forward * SurfaceMountDistance, Color.red);
+                hitSurface = Physics.Raycast(position, transform.forward,surfaceMountDistance) ||
+                             Physics.Raycast(position, -transform.forward,surfaceMountDistance) ||
+                             Physics.Raycast(position, transform.right,surfaceMountDistance) ||
+                             Physics.Raycast(position, -transform.right,surfaceMountDistance);
+                Debug.DrawRay(position,transform.forward * surfaceMountDistance, Color.red);
                 break;
             case FurnitureType.CEILING:
-                hitSurface = Physics.Raycast(position, transform.up,SurfaceMountDistance);
-                Debug.DrawRay(position,transform.up * SurfaceMountDistance, Color.red,SurfaceMountDistance);
+                hitSurface = Physics.Raycast(position, transform.up,surfaceMountDistance);
+                Debug.DrawRay(position,transform.up * surfaceMountDistance, Color.red,surfaceMountDistance);
                 break;
             case FurnitureType.FLOOR:
-                hitSurface = Physics.Raycast(position, -transform.up,SurfaceMountDistance);
-                Debug.DrawRay(position,-transform.up * SurfaceMountDistance, Color.red);
+                hitSurface = Physics.Raycast(position, -transform.up,surfaceMountDistance);
+                Debug.DrawRay(position,-transform.up * surfaceMountDistance, Color.red);
                 break;
             case FurnitureType.NONE:
                 hitSurface = true;
