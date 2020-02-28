@@ -1,0 +1,2 @@
+D:\Christopher\Dokumente\gitHub_repo\hololens-project\HoloLensRoomDesigner\Assets\Dependencies\netstandard2.0\HoloLensRoomDesigner.Dependencies.msb4u.deps.json
+D:\Christopher\Dokumente\gitHub_repo\hololens-project\HoloLensRoomDesigner\MSBuild\Output\obj\Dependencies\Release\netstandard2.0\HoloLensRoomDesigner.Dependencies.msb4u.csprojAssemblyReference.cache
