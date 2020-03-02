@@ -266,12 +266,12 @@ PrefabInstance:
     - target: {fileID: 2011445214880163462, guid: 53647ef1a98f19e49b3394f05ff7fe5a,
         type: 3}
       propertyPath: cellWidth
-      value: 0.6
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2011445214880163462, guid: 53647ef1a98f19e49b3394f05ff7fe5a,
         type: 3}
       propertyPath: cellHeight
-      value: 0.6
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2011445214880163462, guid: 53647ef1a98f19e49b3394f05ff7fe5a,
         type: 3}
