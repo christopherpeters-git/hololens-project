@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.MixedReality.Toolkit.Experimental.Utilities;
 using UnityEngine;
 
+[Serializable]
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
@@ -17,6 +18,10 @@ public class PlayerBehaviour : MonoBehaviour
     /// To make this script a singleton
     /// </summary>
     private static PlayerBehaviour _instance;
+    /// <summary>
+    /// To serialize the gameState
+    /// </summary>
+    public static GameObject playerObject;
     
     public ToolMode Tool { get; set; }
     // Start is called before the first frame update
@@ -30,6 +35,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             throw new Exception("Only one PlayerBehaviour is allowed!");
         }
+        playerObject = gameObject;
+        _worldAnchorManager = GetComponent<WorldAnchorManager>();
         instantiatedObjects = new List<GameObject>();
         Tool = ToolMode.EDIT;
         _camera = GetComponentInParent<Camera>();
@@ -56,6 +63,7 @@ public class PlayerBehaviour : MonoBehaviour
         
         currentObject = Instantiate(furniture, _camera.transform.position + new Vector3(0,0,_spawnDistance), Quaternion.identity);
         FurnitureBehaviour currentFurnitureBehaviour = currentObject.GetComponent<FurnitureBehaviour>();
+        currentFurnitureBehaviour.SetId();
         currentFurnitureBehaviour.Player = this;
         currentFurnitureBehaviour.WorldAnchorManager = _worldAnchorManager;
         instantiatedObjects.Add(currentObject);

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2871489558168768157}
   - component: {fileID: 2871489558168768156}
+  - component: {fileID: 5969877280791876497}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -43,4 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb8a807c367c7545a94cead719f0212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _camera: {fileID: 0}
+  _spawnDistance: 2
+  _worldAnchorManager: {fileID: 0}
   currentObject: {fileID: 0}
+  instantiatedObjects: []
+--- !u!114 &5969877280791876497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2871489558168768154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edef0f26fefe56245bf1a4dff71182f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorDebugText: {fileID: 0}
+  showDetailedLogs: 0
+  persistentAnchors: 0

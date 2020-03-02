@@ -2,6 +2,7 @@
 using Microsoft.MixedReality.Toolkit.Experimental.Utilities;
 using UnityEngine;
 
+[Serializable]
 public class FurnitureBehaviour : MonoBehaviour
 {
     public FurnitureType type;
@@ -10,18 +11,17 @@ public class FurnitureBehaviour : MonoBehaviour
     public float surfaceMountDistance;
 
     private static int _maxId = 0;
-    private static int id;
+    private int id;
 
     private Outline _outline;
 
-    public WorldAnchorManager WorldAnchorManager { get; set; }
+    public WorldAnchorManager WorldAnchorManager { private get; set; }
     public PlayerBehaviour Player { get; set; }
     
     // Start is called before the first frame update
     void Start()
     {
         _outline = GetComponent<Outline>();
-        SetId();
         Moved = false;
         if (type == FurnitureType.NONE)
         {
@@ -39,7 +39,7 @@ public class FurnitureBehaviour : MonoBehaviour
         WorldAnchorManager.RemoveAnchor(id.ToString());
     }
 
-    private void SetId()
+    public void SetId()
     {
         id = _maxId;
         _maxId++;
