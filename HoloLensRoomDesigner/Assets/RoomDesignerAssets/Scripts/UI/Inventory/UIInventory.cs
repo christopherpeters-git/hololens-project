@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.MixedReality.Toolkit.Experimental.UI;
 using Microsoft.MixedReality.Toolkit.UI;
 using TMPro;
 using UnityEngine;
@@ -26,14 +27,16 @@ public class UIInventory : MonoBehaviour
     /// </summary>
     private void FillInventory()
     {
-        float xOffset = 0;
+        ScrollingObjectCollection collection = _contentWindow.GetComponentInParent<ScrollingObjectCollection>();
+        collection.CanScroll = true;
+
         foreach (var piece in _furniturePieces)
         {
-            GameObject newButton = Instantiate(_buttonPrefab, new Vector3(xOffset - 0.1f,0.0f,0.8f), Quaternion.identity, _contentWindow.transform);
-            newButton.GetComponentInChildren<TextMeshPro>().text =
-                piece.GetComponent<FurnitureBehaviour>().name;
+            //GameObject newButton = Instantiate(_buttonPrefab, new Vector3(xOffset - 0.1f,0.0f,0.8f), Quaternion.identity, _contentWindow.transform);
+            GameObject newButton = Instantiate(_buttonPrefab,_contentWindow.transform);
+            newButton.GetComponentInChildren<TextMeshPro>().text = piece.GetComponent<FurnitureBehaviour>().name;
             newButton.GetComponent<Interactable>().OnClick.AddListener(() => _player.SpawnFurniture(piece));
-            xOffset += 0.1f;
         }
+        collection.UpdateCollection();
     }
 }
