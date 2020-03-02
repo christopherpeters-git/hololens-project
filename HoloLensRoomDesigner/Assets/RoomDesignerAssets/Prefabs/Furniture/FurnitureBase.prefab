@@ -143,7 +143,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1964813838217097022}
-        m_MethodName: set_moved
+        m_MethodName: set_Moved
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
