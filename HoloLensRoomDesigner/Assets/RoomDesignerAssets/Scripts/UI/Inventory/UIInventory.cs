@@ -27,16 +27,14 @@ public class UIInventory : MonoBehaviour
     /// </summary>
     private void FillInventory()
     {
-        ScrollingObjectCollection collection = _contentWindow.GetComponentInParent<ScrollingObjectCollection>();
-        collection.CanScroll = true;
-
+        InventoryGrid collection = _contentWindow.GetComponent<InventoryGrid>();
+        
         foreach (var piece in _furniturePieces)
         {
-            //GameObject newButton = Instantiate(_buttonPrefab, new Vector3(xOffset - 0.1f,0.0f,0.8f), Quaternion.identity, _contentWindow.transform);
             GameObject newButton = Instantiate(_buttonPrefab,_contentWindow.transform);
             newButton.GetComponentInChildren<TextMeshPro>().text = piece.GetComponent<FurnitureBehaviour>().name;
             newButton.GetComponent<Interactable>().OnClick.AddListener(() => _player.SpawnFurniture(piece));
         }
-        collection.UpdateCollection();
+        collection.Init();
     }
 }
