@@ -5,14 +5,22 @@ using UnityEngine;
 
 public class InventoryGrid : MonoBehaviour
 {
+    [SerializeField] private int visibleRows;
+    [SerializeField] private int maxColumns;
+    
+    [Header("Layout")]
     [SerializeField] private float cellHeight;
     [SerializeField] private float cellWidth;
     [SerializeField] private float spaceVertical;
     [SerializeField] private float spaceHorizontal;
-    [SerializeField] private int maxColumns;
+    
+    [Header("Scroll Buttons")] 
+    [SerializeField] private GameObject buttonUp;
+    [SerializeField] private GameObject buttonDown;
     
     private GameObject[,] _grid;
-    private int childCount;
+    private int childCount = 0;
+    private int currentFirstVisibleRow = 0;
 
     
     
@@ -23,13 +31,48 @@ public class InventoryGrid : MonoBehaviour
         {
             throw new Exception("maxColumns is smaller than 1");
         }
+
+        if (visibleRows <= 0)
+        {
+            throw new Exception("visibleRows is smaller than 1");
+        }
+    }
+    
+    public void ShowNextRow()
+    {
+        if (currentFirstVisibleRow < (_grid.GetLength(0) - 1))
+        {
+            SetRowVisibility(currentFirstVisibleRow,false);
+            SetRowVisibility(currentFirstVisibleRow + visibleRows,true);
+            currentFirstVisibleRow++;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowPreviousRow()
     {
-        
+        if (currentFirstVisibleRow > 0)
+        {
+            currentFirstVisibleRow--;
+            SetRowVisibility(currentFirstVisibleRow,true);
+            SetRowVisibility(currentFirstVisibleRow + visibleRows,false);
+        }
     }
+
+    private void SetRowVisibility(int row, bool isVisible)
+    {
+        if (row >= 1)
+        {
+            for (int i = 0; i < maxColumns; i++)
+            {
+                if (_grid[row,i])
+                {
+                    _grid[row,i].SetActive(isVisible);
+                }
+            }  
+        }
+    }
+    
+    
 
     /// <summary>
     /// Initializes grid and sets positions of items in grid
@@ -39,9 +82,14 @@ public class InventoryGrid : MonoBehaviour
         InitializeGrid();
         PopulateGrid();
         SetPositionOfItemsInGrid();
+        InitializeVisibility();
     }
     
-
+    
+    
+    /// <summary>
+    /// Instantiates a new array with a fitting size
+    /// </summary>
     private void InitializeGrid()
     {
         foreach (Transform child in transform)
@@ -62,7 +110,9 @@ public class InventoryGrid : MonoBehaviour
         Debug.Log("Columns: " + (_grid.Length / _grid.GetLength(0)));
         Debug.Log("Rows: " + _grid.GetLength(0));
     }
-
+    /// <summary>
+    /// Adds all children with the "InventoryItem"-Tag to the array
+    /// </summary>
     private void PopulateGrid()
     {   
         int countX = 0;
@@ -81,7 +131,9 @@ public class InventoryGrid : MonoBehaviour
             } 
         } 
     }
-
+    /// <summary>
+    /// Sets the items in the array in the correct position
+    /// </summary>
     private void SetPositionOfItemsInGrid()
     {
         float offsetY = 0;
@@ -94,7 +146,6 @@ public class InventoryGrid : MonoBehaviour
                 { 
                     _grid[row, column].transform.position = new Vector3(offsetX, offsetY, 0.0f);
                     offsetX += spaceHorizontal + cellWidth;
-                    Debug.Log(_grid[row,column].transform.position);
                 }
             }
             offsetY -= cellHeight + spaceVertical;
@@ -102,13 +153,15 @@ public class InventoryGrid : MonoBehaviour
 
     }
     
-    public void ScrollDown()
+    /// <summary>
+    /// Sets the visibility of the rows in the inventory on startup
+    /// </summary>
+    private void InitializeVisibility()
     {
-        
-    }
-
-    public void ScrollUp()
-    {
-        
+        int rows = (int) (childCount / maxColumns) + 1;
+        for (int i = 0; i < rows; i++)
+        {
+            SetRowVisibility(i, i < visibleRows);
+        }
     }
 }

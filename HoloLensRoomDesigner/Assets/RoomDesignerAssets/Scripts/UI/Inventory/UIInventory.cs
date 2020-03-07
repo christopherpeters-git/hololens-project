@@ -8,9 +8,9 @@ using UnityEngine;
 
 public class UIInventory : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> _furniturePieces;
-    [SerializeField] private GameObject _buttonPrefab;
-    [SerializeField] private GameObject _contentWindow;
+    [SerializeField] private List<GameObject> furniturePieces;
+    [SerializeField] private GameObject itemButtonPrefab;
+    [SerializeField] private GameObject contentWindow;
 
     private PlayerBehaviour _player;
     
@@ -27,11 +27,11 @@ public class UIInventory : MonoBehaviour
     /// </summary>
     private void FillInventory()
     {
-        InventoryGrid collection = _contentWindow.GetComponent<InventoryGrid>();
+        InventoryGrid collection = contentWindow.GetComponent<InventoryGrid>();
         
-        foreach (var piece in _furniturePieces)
+        foreach (var piece in furniturePieces)
         {
-            GameObject newButton = Instantiate(_buttonPrefab,_contentWindow.transform);
+            GameObject newButton = Instantiate(itemButtonPrefab,contentWindow.transform);
             newButton.GetComponentInChildren<TextMeshPro>().text = piece.GetComponent<FurnitureBehaviour>().name;
             newButton.GetComponent<Interactable>().OnClick.AddListener(() => _player.SpawnFurniture(piece));
         }
