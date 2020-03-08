@@ -617,6 +617,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.13
       objectReference: {fileID: 0}
+    - target: {fileID: 1585224602515653073, guid: 98687b61491f6ad4b8736be621c5f6b6,
+        type: 3}
+      propertyPath: visibleRows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1585224603511907680, guid: 98687b61491f6ad4b8736be621c5f6b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1102,6 +1107,42 @@ PrefabInstance:
     - target: {fileID: 1643048376851210018, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
         type: 3}
       propertyPath: furniturePieces.Array.data[5]
+      value: 
+      objectReference: {fileID: 7937708372727433838, guid: 5f385d0357d49c0488ec1e28f28c7fc5,
+        type: 3}
+    - target: {fileID: 1643048376851210018, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: furniturePieces.Array.data[6]
+      value: 
+      objectReference: {fileID: 7937708372727433838, guid: 5f385d0357d49c0488ec1e28f28c7fc5,
+        type: 3}
+    - target: {fileID: 1643048376851210018, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: furniturePieces.Array.data[7]
+      value: 
+      objectReference: {fileID: 7937708372727433838, guid: 5f385d0357d49c0488ec1e28f28c7fc5,
+        type: 3}
+    - target: {fileID: 1643048376851210018, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: furniturePieces.Array.data[8]
+      value: 
+      objectReference: {fileID: 7937708372727433838, guid: 5f385d0357d49c0488ec1e28f28c7fc5,
+        type: 3}
+    - target: {fileID: 1643048376851210018, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: furniturePieces.Array.data[9]
+      value: 
+      objectReference: {fileID: 7937708372727433838, guid: 5f385d0357d49c0488ec1e28f28c7fc5,
+        type: 3}
+    - target: {fileID: 1643048376851210018, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: furniturePieces.Array.data[10]
+      value: 
+      objectReference: {fileID: 7937708372727433838, guid: 5f385d0357d49c0488ec1e28f28c7fc5,
+        type: 3}
+    - target: {fileID: 1643048376851210018, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: furniturePieces.Array.data[11]
       value: 
       objectReference: {fileID: 7937708372727433838, guid: 5f385d0357d49c0488ec1e28f28c7fc5,
         type: 3}

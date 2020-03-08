@@ -21,9 +21,9 @@ public class InventoryGrid : MonoBehaviour
     private GameObject[,] _grid;
     private int childCount = 0;
     private int currentFirstVisibleRow = 0;
+    private enum ContentMoveDirection{UP = 0, DOWN = 1}
 
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,30 +37,57 @@ public class InventoryGrid : MonoBehaviour
             throw new Exception("visibleRows is smaller than 1");
         }
     }
-    
+    /// <summary>
+    /// Hides the current row and shows the next row
+    /// </summary>
     public void ShowNextRow()
     {
-        if (currentFirstVisibleRow < (_grid.GetLength(0) - 1))
+        int maxCurrentFirstVisibleRow = _grid.GetLength(0) - visibleRows - 1;
+        if (currentFirstVisibleRow < maxCurrentFirstVisibleRow)
         {
             SetRowVisibility(currentFirstVisibleRow,false);
             SetRowVisibility(currentFirstVisibleRow + visibleRows,true);
             currentFirstVisibleRow++;
+            MoveInventoryContent(ContentMoveDirection.UP);
         }
     }
-
+    /// <summary>
+    /// Hides the last visible row and shows the one before the current visible row
+    /// </summary>
     public void ShowPreviousRow()
     {
         if (currentFirstVisibleRow > 0)
         {
+            SetRowVisibility(currentFirstVisibleRow - 1,true);
+            SetRowVisibility(currentFirstVisibleRow + visibleRows - 1,false);
             currentFirstVisibleRow--;
-            SetRowVisibility(currentFirstVisibleRow,true);
-            SetRowVisibility(currentFirstVisibleRow + visibleRows,false);
+            MoveInventoryContent(ContentMoveDirection.DOWN);
+        }
+    }
+    private void MoveInventoryContent(ContentMoveDirection dir)
+    {
+        Vector3 offset;
+        if (dir == ContentMoveDirection.UP)
+        {
+            offset = new Vector3(0,cellHeight + spaceVertical,0);
+        }
+        else
+        {
+            offset = new Vector3(0,-(cellHeight + spaceVertical),0); 
+        }
+
+        foreach (var item in _grid)
+        {
+            if (item)
+            {
+                item.transform.position += offset;
+            }
         }
     }
 
     private void SetRowVisibility(int row, bool isVisible)
     {
-        if (row >= 1)
+        if (row >= 0)
         {
             for (int i = 0; i < maxColumns; i++)
             {
