@@ -32,16 +32,6 @@ public class FurnitureBehaviour : MonoBehaviour
         }
     }
 
-    public void AddAsWorldAnchor()
-    {
-        
-    }
-
-    public void RemoveAsWorldAnchor()
-    {
-        
-    }
-
     private void SetId()
     {
         _id = maxId;
