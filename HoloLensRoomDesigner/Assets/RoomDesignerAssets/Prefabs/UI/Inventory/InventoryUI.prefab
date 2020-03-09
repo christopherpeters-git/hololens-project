@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2904928868585562881}
   - component: {fileID: 1643048376851210018}
   - component: {fileID: 734051039343736468}
+  - component: {fileID: 3612531849835697716}
   m_Layer: 5
   m_Name: InventoryUI
   m_TagString: Untagged
@@ -161,16 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4436582bd6e9b4a83c00812034cc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _furniturePieces:
-  - {fileID: 89927889233656110, guid: 7e4a37a22f90dd843b9341f202973645, type: 3}
-  - {fileID: 6010740388209051525, guid: f6af80390373ec24e91e3120afe7f4d4, type: 3}
-  - {fileID: 2592700939474496522, guid: f5cbe6e8b339e7548a3fa970e4bf16dc, type: 3}
-  - {fileID: 5668136006035926739, guid: 1ee9be57e30bebf4aab99f9c5f61d1c4, type: 3}
-  - {fileID: 3610572027926826523, guid: 911b8d786e5ffb745b85f3a72fd056b0, type: 3}
-  - {fileID: 7937708372727433838, guid: 5f385d0357d49c0488ec1e28f28c7fc5, type: 3}
-  _buttonPrefab: {fileID: 2049529140113575894, guid: d3fb91f09283aea47bcc76d21a830a2b,
-    type: 3}
-  _contentWindow: {fileID: 0}
+  furniturePieces: []
+  itemButtonPrefab: {fileID: 0}
+  contentWindow: {fileID: 0}
 --- !u!114 &734051039343736468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +179,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useStartOffset: 1
   target: {fileID: 0}
+  offsetX: 0
+  offsetY: 0
   offsetZ: 0
+--- !u!114 &3612531849835697716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243913869589704207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757d0f803c8be704386821743672a568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2128062893895980276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,8 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1201f4532f630804099788a46734835d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ui: {fileID: 6243913869589704207}
-  _buttonBackToUI: {fileID: 0}
+  buttonBackToUI: {fileID: 0}
 --- !u!1001 &3242315360709965755
 PrefabInstance:
   m_ObjectHideFlags: 0

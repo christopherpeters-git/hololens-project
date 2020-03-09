@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ButtonBackToUI : MonoBehaviour
 {
-    [SerializeField] private ButtonPhotoMode _photoMode;
+    [SerializeField] private ButtonPhotoMode buttonPhotoMode;
 
     public void ToggleUI()
     {
-        _photoMode.ToggleUI();
+        buttonPhotoMode.ToggleUI();
     }
 }

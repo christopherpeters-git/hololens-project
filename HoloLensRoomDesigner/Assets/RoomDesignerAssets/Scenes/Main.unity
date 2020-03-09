@@ -1168,9 +1168,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2128062893895980276, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
         type: 3}
+      propertyPath: itemsToHide.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128062893895980276, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
       propertyPath: _buttonBackToUI
       value: 
       objectReference: {fileID: 583774849}
+    - target: {fileID: 2128062893895980276, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: buttonBackToUI
+      value: 
+      objectReference: {fileID: 583774849}
+    - target: {fileID: 2128062893895980276, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: itemsToHide.Array.data[0]
+      value: 
+      objectReference: {fileID: 1838697805}
+    - target: {fileID: 2128062893895980276, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: itemsToHide.Array.data[1]
+      value: 
+      objectReference: {fileID: 319851948}
     - target: {fileID: 2806286194268299297, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
         type: 3}
       propertyPath: m_Mesh
