@@ -1186,6 +1186,11 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 173037709}
+    - target: {fileID: 2904928868585562881, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
+        type: 3}
+      propertyPath: _editModeobjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 319851948}
     - target: {fileID: 3013940135091176655, guid: caab2b8f9b3652b4a9b4e35e7f66036a,
         type: 3}
       propertyPath: m_textInfo.characterCount
