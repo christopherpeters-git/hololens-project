@@ -17,12 +17,6 @@ public class ButtonOpenInventory : MonoBehaviour
         _inventory.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     /// <summary>
     /// Toggles inventory by enabling/disabling gameobject
     /// </summary>

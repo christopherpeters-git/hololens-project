@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.MixedReality.Toolkit.Experimental.UI;
 using Microsoft.MixedReality.Toolkit.UI;
 using TMPro;
 using UnityEngine;
 
 public class UIInventory : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> _furniturePieces;
-    [SerializeField] private GameObject _buttonPrefab;
-    [SerializeField] private GameObject _contentWindow;
+    [SerializeField] private List<GameObject> furniturePieces;
+    [SerializeField] private GameObject itemButtonPrefab;
+    [SerializeField] private GameObject contentWindow;
 
     private PlayerBehaviour _player;
     
@@ -26,14 +27,14 @@ public class UIInventory : MonoBehaviour
     /// </summary>
     private void FillInventory()
     {
-        float xOffset = 0;
-        foreach (var piece in _furniturePieces)
+        InventoryGrid collection = contentWindow.GetComponent<InventoryGrid>();
+        
+        foreach (var piece in furniturePieces)
         {
-            GameObject newButton = Instantiate(_buttonPrefab, new Vector3(xOffset - 0.1f,0.0f,0.8f), Quaternion.identity, _contentWindow.transform);
-            newButton.GetComponentInChildren<TextMeshPro>().text =
-                piece.GetComponent<FurnitureBehaviour>().name;
+            GameObject newButton = Instantiate(itemButtonPrefab,contentWindow.transform);
+            newButton.GetComponentInChildren<TextMeshPro>().text = piece.GetComponent<FurnitureBehaviour>().name;
             newButton.GetComponent<Interactable>().OnClick.AddListener(() => _player.SpawnFurniture(piece));
-            xOffset += 0.1f;
         }
+        collection.Init();
     }
 }
