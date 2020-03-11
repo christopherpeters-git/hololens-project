@@ -181,6 +181,11 @@ PrefabInstance:
       propertyPath: name
       value: OfficeChair0
       objectReference: {fileID: 0}
+    - target: {fileID: 1964813838217097022, guid: f7c7cf08967bcec409b4e4a1afbed820,
+        type: 3}
+      propertyPath: surfaceMountDistance
+      value: 0.125
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -3412536990064974472, guid: f7c7cf08967bcec409b4e4a1afbed820, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7c7cf08967bcec409b4e4a1afbed820, type: 3}
