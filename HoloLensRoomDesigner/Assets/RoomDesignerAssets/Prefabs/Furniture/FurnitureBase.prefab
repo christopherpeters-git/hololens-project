@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   name: Fluorescent lamp 00
-  surfaceMountDistance: 0
+  surfaceMountDistance: 0.125
 --- !u!114 &3056276251328084793
 MonoBehaviour:
   m_ObjectHideFlags: 0

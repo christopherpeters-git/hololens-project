@@ -7,5 +7,5 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/RoomDesignerAssets/Scenes/Main.unity
-    guid: c978f9e48f8ad3147881dc9385011438
+    guid: 0e561d3f5c0f334449357196063febdb
   m_configObjects: {}

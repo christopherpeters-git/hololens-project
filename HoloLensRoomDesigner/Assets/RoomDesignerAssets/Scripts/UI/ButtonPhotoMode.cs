@@ -6,14 +6,15 @@ using UnityEngine;
 
 public class ButtonPhotoMode : MonoBehaviour
 {
-    [SerializeField] private GameObject _ui;
-    [SerializeField] private GameObject _buttonBackToUI;
-    private bool _isInPhotoMode;
+    private HideInPhotoMode[] _itemsToHide;
+    [SerializeField] private GameObject buttonBackToUI;
+    private bool _isInPhotoMode = false;
     private PlayerBehaviour _player;
 
     public void Start()
     {
         _player = GameObject.Find("Player").GetComponent<PlayerBehaviour>();
+        _itemsToHide = FindObjectsOfType<HideInPhotoMode>();
     }
 
     /// <summary>
@@ -21,17 +22,26 @@ public class ButtonPhotoMode : MonoBehaviour
     /// </summary>
     public void ToggleUI()
     {
-        if (_ui.activeSelf)
+        if (!_isInPhotoMode)
         {
            SetBoundingBoxesVisibility(false);
-            _ui.SetActive(false);
-            _buttonBackToUI.SetActive(true);
+           foreach (var item in _itemsToHide)
+           {
+               item.gameObject.SetActive(false);
+               
+           }
+           buttonBackToUI.SetActive(true);
+           _isInPhotoMode = true;
         }
         else
         {
-            _buttonBackToUI.SetActive(false);
-            _ui.SetActive(true);
+            buttonBackToUI.SetActive(false);
+            foreach (var item in _itemsToHide)
+            {
+                item.gameObject.SetActive(true);
+            }
             SetBoundingBoxesVisibility(true);
+            _isInPhotoMode = false;
         }
     }
 

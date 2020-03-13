@@ -1,8 +1,12 @@
 ﻿using System;
-using Microsoft.MixedReality.Toolkit.Experimental.Utilities;
+using System.Collections;
+using System.Collections.Generic;
+using Microsoft.MixedReality.Toolkit.Input;
+using Microsoft.MixedReality.Toolkit.UI;
+using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
 using UnityEngine;
+using UnityEngine.XR.WSA;
 
-[Serializable]
 public class FurnitureBehaviour : MonoBehaviour
 {
     public FurnitureType type;
@@ -10,8 +14,8 @@ public class FurnitureBehaviour : MonoBehaviour
     public new String name;
     public float surfaceMountDistance;
 
-    private static int _maxId = 0;
-    private int id;
+    private static int maxId = 0;
+    private static int _id;
 
     private Outline _outline;
 
@@ -22,6 +26,7 @@ public class FurnitureBehaviour : MonoBehaviour
     void Start()
     {
         _outline = GetComponent<Outline>();
+        SetId();
         Moved = false;
         if (type == FurnitureType.NONE)
         {
@@ -40,9 +45,10 @@ public class FurnitureBehaviour : MonoBehaviour
     }
 
     public void SetId()
+    private void SetId()
     {
-        id = _maxId;
-        _maxId++;
+        _id = maxId;
+        maxId++;
     }
 
     public void DestroyOnRemove()
