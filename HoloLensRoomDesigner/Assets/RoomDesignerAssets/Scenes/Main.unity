@@ -411,7 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anchorDebugText: {fileID: 0}
   showDetailedLogs: 0
-  persistentAnchors: 0
+  persistentAnchors: 1
 --- !u!4 &1108193173
 Transform:
   m_ObjectHideFlags: 0

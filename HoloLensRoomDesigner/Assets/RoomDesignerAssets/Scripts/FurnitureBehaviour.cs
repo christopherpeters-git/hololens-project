@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.MixedReality.Toolkit.Experimental.Utilities;
 using Microsoft.MixedReality.Toolkit.Input;
 using Microsoft.MixedReality.Toolkit.UI;
 using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
@@ -15,7 +16,7 @@ public class FurnitureBehaviour : MonoBehaviour
     public float surfaceMountDistance;
 
     private static int maxId = 0;
-    private static int _id;
+    private static int id;
 
     private Outline _outline;
 
@@ -45,9 +46,8 @@ public class FurnitureBehaviour : MonoBehaviour
     }
 
     public void SetId()
-    private void SetId()
     {
-        _id = maxId;
+        id = maxId;
         maxId++;
     }
 
